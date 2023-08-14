@@ -53,26 +53,26 @@ get_header();?>
 </section>
 
 <section>
-  <div class="h-screen">
+  <div class="h-full delimiter">
     <div class="flex h-full items-center">
-      <img class="m-auto h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/slider-book.png" alt="">
+      <img class="m-auto h-screen object-contain" src="<?php bloginfo('stylesheet_directory');?>/assets/img/slider-book.png" alt="">
     </div>
   </div>
 </section>
 
 <section class="bg-[#EDEBE4]">
-  <div class="h-screen">
+  <div class="h-full delimiter">
     <div class="flex h-full items-center">
-      <img class="m-auto h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/synopsis.png" alt="">
+      <img class="m-auto h-screen object-contain" src="<?php bloginfo('stylesheet_directory');?>/assets/img/synopsis.png" alt="">
     </div>
   </div>
 </section>
 
 <section class="py-[50px]">
-  <div class="h-screen">
+  <div class="h-full delimiter">
     <h2 class="font-medium text-[48px] font-butler text-center">Book Specification</h2>
     <div class="flex h-full items-center">
-      <img class="m-auto h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/book-spek.png" alt="">
+      <img class="m-auto h-screen object-contain" src="<?php bloginfo('stylesheet_directory');?>/assets/img/book-spek.png" alt="">
     </div>
   </div>
 </section>
