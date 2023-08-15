@@ -134,7 +134,7 @@ get_header();?>
       </ul>
     </div>
     <div>
-      <h2 class="font-butler text-[32px] md:text-[48px] font-medium">Full Moon Package</h2>
+      <h2 class="font-butler text-[32px] md:text-[48px] font-medium">Crescent Package</h2>
       <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
       </svg>
@@ -149,7 +149,7 @@ get_header();?>
         <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="1000"> 0 </span> copies</b>
       </div>
       <div>
-        <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 80.000</h3>
+        <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 65.000</h3>
       </div>
       <div class="mt-5">
         <a href="#" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
@@ -161,7 +161,7 @@ get_header();?>
   <div class="delimiter py-[50px] md:py-[100px]">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-32 md:h-screen">
     <div>
-        <h2 class="font-butler text-[32px] md:text-[48px] font-medium">Full Moon Package</h2>
+        <h2 class="font-butler text-[32px] md:text-[48px] font-medium">Eclipse Package</h2>
         <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
         </svg>
