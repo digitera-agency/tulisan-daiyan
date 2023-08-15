@@ -77,7 +77,7 @@ get_header();?>
   </div>
 </section>
 
-<!-- <section class="delimiter py-[100px]">
+<section class="delimiter py-[100px]">
   <div class="grid grid-cols-2 gap-x-32 h-screen">
     <div>
       <h2 class="font-butler text-[42px] font-medium">Full Moon Package</h2>
@@ -117,8 +117,8 @@ get_header();?>
       </ul>
     </div>
   </div>
-</section> -->
-<!-- <section class="delimiter py-[100px]">
+</section>
+<section class="delimiter py-[100px]">
   <div class="grid grid-cols-2 gap-x-32 h-screen">
     <div class="demo">
       <ul id="lightSlider2">
@@ -158,8 +158,8 @@ get_header();?>
       </div>
     </div>
   </div>
-</section> -->
-<!-- <section class="delimiter py-[100px]">
+</section>
+<section class="delimiter py-[100px]">
   <div class="grid grid-cols-2 gap-x-32 h-screen">
     <div>
       <h2 class="font-butler text-[42px] font-medium">Full Moon Package</h2>
@@ -186,8 +186,8 @@ get_header();?>
       <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/eclipse-packages.png" alt="">
     </div>
   </div>
-</section> -->
-<!-- <section class="py-[100px] bg-white w-full">
+</section>
+<section class="py-[100px] bg-white w-full">
   <h2 class="font-butler text-[42px] font-medium text-center pb-[100px]">Full Moon Package</h2>
   <div class="max-w-screen-lg w-full mx-auto px-10">
       <div class="flex items-center justify-center w-full">
@@ -232,9 +232,9 @@ get_header();?>
           </div>
       </div>
   </div>
-</section> -->
+</section>
 
-<!-- <section class="delimiter py-[100px]">
+<section class="delimiter py-[100px]">
   <h2 class="font-butler text-[42px] font-medium text-center pb-[100px]">Full Moon Package</h2>
   <div class="grid grid-cols-2 gap-x-32">
    <div class="px-24 text-center">
@@ -248,18 +248,18 @@ get_header();?>
     <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/n-logo.png" alt="">
   </div> 
   </div>
-</section> -->
+</section>
 
-<!-- <section class="bg-[#EDEBE4]">
+<section class="bg-[#EDEBE4]">
   <div class="h-screen">
     <div class="flex h-full items-center">
       <img class="m-auto h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/profile.png" alt="">
     </div>
   </div>
-</section> -->
+</section>
 
 
-<!-- <div itemscope itemtype="https://schema.org/FAQPage">
+<div itemscope itemtype="https://schema.org/FAQPage">
 
   <div class="py-10 px-4 delimiter mx-auto">
     <h1 class="font-butler text-[42px] font-medium text-center pb-[100px]">FAQ items stay open (Checkbox)</h1>
@@ -302,14 +302,14 @@ get_header();?>
       </li>
     </ul>
   </div>
-</div> -->
+</div>
 
-<!-- <section>
+<section>
   <div class="text-center py-[100px]">
     <h2 class="font-butler text-[42px] font-medium text-center">Still have Question?</h2>
     <p class="py-[25px]">We're here for you! How can we help?</p>
     <div class="pt-3"><a href="" class="bg-[#10A37F] rounded-full px-6 py-3 w-fit text-white text-[16px]">Chat Us <img class="inline-block w-4 mb-[5px] ml-[2px]" src="<?php bloginfo('stylesheet_directory');?>/assets/img/send-icon.png" alt=""></a></div>
   </div>
-</section> -->
+</section>
 <?php get_footer();?>
 
