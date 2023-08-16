@@ -19,6 +19,7 @@ html,
 body {
     margin: auto;
     font-family: 'avenir', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {

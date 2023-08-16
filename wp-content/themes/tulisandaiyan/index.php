@@ -103,7 +103,7 @@ get_header();?>
           <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 80.00</h3>
         </div>
         <div class="mt-5">
-          <a href="#" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
+          <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
         </div>
       </div>
       <div class="demo pt-[50px] md:pt-[0px]">
@@ -145,18 +145,16 @@ get_header();?>
         <ul class="list-disc ps-4 text-[#555] py-[50px]">
           <li class="leading-10">Tulisan Hard Cover</li>
           <li class="leading-10">Daiyan’s Autograph</li>
-          <li class="leading-10">Tulisan Gift Box</li>
           <li class="leading-10">Daiyan’s Special Letter</li>
-          <li class="leading-10">8 pcs Exclusive Photo Cards</li>
         </ul>
       <div id="counter" class="pb-[30px]">
-        <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="1000"> 0 </span> copies</b>
+        <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="500"> 0 </span> copies</b>
       </div>
       <div>
-        <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 65.000</h3>
+        <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 65.00</h3>
       </div>
       <div class="mt-5">
-        <a href="#" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
+        <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
       </div>
     </div>
   </div>
@@ -172,18 +170,15 @@ get_header();?>
           <ul class="list-disc ps-4 text-[#555] py-[50px]">
             <li class="leading-10">Tulisan Hard Cover</li>
             <li class="leading-10">Daiyan’s Autograph</li>
-            <li class="leading-10">Tulisan Gift Box</li>
-            <li class="leading-10">Daiyan’s Special Letter</li>
-            <li class="leading-10">8 pcs Exclusive Photo Cards</li>
           </ul>
         <div id="counter" class="pb-[30px]">
-          <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="1000"> 0 </span> copies</b>
+          <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="500"> 0 </span> copies</b>
         </div>
         <div>
-          <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 80.00</h3>
+          <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 55.00</h3>
         </div>
         <div class="mt-5">
-          <a href="#" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
+          <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
         </div>
       </div>
       <div class="pt-[50px] md:pt-[0px]">
@@ -274,16 +269,16 @@ get_header();?>
 <section id="preorder" class="delimiter py-[50px] md:py-[100px]">
   <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]">Full Moon Package</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-32">
-   <div class="md:px-24 text-center">
-      <h3 class="font-butler text-[32px] md:text-[48px] font-normal text-center">Shoppe</h3>
+   <a href="https://shopee.com.my/product/264375695/20682874406/" target="_blank" class="md:px-24 text-center">
+      <h3 class="font-butler text-[32px] md:text-[48px] font-normal text-center">Shopee</h3>
       <p class="text-[#74642F] text-[16px] md:text-[24px] py-6 font-normal leading-[28.8px]">For customers residing in Malaysia.</p>
       <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/shoppe.png" class="w-[50%] md:w-auto m-auto" alt="">
-   </div> 
-   <div class="md:px-24 text-center pt-[50px] md:pt-[0px]">
+    </a> 
+   <a href="https://www.nukilanbiruni.com/product/tulisan-by-daiyan-trisha-hardcover-autograph-edition" target="_blank" class="md:px-24 text-center pt-[50px] md:pt-[0px]">
     <h3 class="font-butler text-[32px] md:text-[48px] font-normal text-center">Website</h3>
     <p class="text-[#74642F] text-[16px] md:text-[24px] py-6 font-normal leading-[28.8px]">For customers residing in Malaysia & Overseas.</p>
     <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/n-logo.png" class="w-[50%] md:w-auto m-auto" alt="">
-  </div> 
+  </a> 
   </div>
 </section>
 
@@ -345,7 +340,7 @@ get_header();?>
   <div class="text-center py-[50px] md:py-[100px]">
     <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center">Still have Question?</h2>
     <p class="py-[25px]">We're here for you! How can we help?</p>
-    <div class="pt-3"><a href="" class="bg-[#10A37F] rounded-full px-6 py-3 w-fit text-white text-[16px]">Chat Us <img class="inline-block w-4 mb-[5px] ml-[2px]" src="<?php bloginfo('stylesheet_directory');?>/assets/img/send-icon.png" alt=""></a></div>
+    <div class="pt-3"><a href="https://wa.link/85mxoo" target="_blank" class="bg-[#10A37F] rounded-full px-6 py-3 w-fit text-white text-[16px]">Chat Us <img class="inline-block w-4 mb-[5px] ml-[2px]" src="<?php bloginfo('stylesheet_directory');?>/assets/img/send-icon.png" alt=""></a></div>
   </div>
 </section>
 <?php get_footer();?>
