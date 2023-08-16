@@ -27,7 +27,7 @@
 </head>
 
 <body class="bg-[#FBF6F0]">
-
+<div id="loading" class="loading"><img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo-loading.png" alt=""></div>
 <nav id="navbar" class="bg-[#FBF6F0] fixed w-full z-20 top-0 left-0 nav">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="/" class="flex items-center">

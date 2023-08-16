@@ -9,8 +9,6 @@
 
 get_header();?>
 
-<div id="loading" class="loading"><img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo-loading.png" alt=""></div>
-
 <section class="pt-[100px] md:pt-0">
   <div class="md:h-screen py-[100px] md:py-0">
     <div class="flex h-full items-center justify-center">

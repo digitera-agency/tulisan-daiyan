@@ -124,5 +124,10 @@ body {
     font-size: 24px;
     color: #333;
     opacity: 1;
+    position: absolute;
+    z-index: 99999999;
+    width: 100%;
+    top: 0;
+    left: 0;
     transition: opacity 0.5s ease-out;
 }
