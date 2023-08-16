@@ -180,13 +180,13 @@ window.onload = function() {
       });
 
       typewriterOne
-        .pauseFor(2500)
+        .pauseFor(500)
         .typeString('tulisan')
         .pauseFor(4800)
         .start();
 
       typewriterTwo
-        .pauseFor(2670)
+        .pauseFor(670)
         .typeString('by daiyan trisha')
         .pauseFor(5000)
         .start();
