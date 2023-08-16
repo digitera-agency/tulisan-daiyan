@@ -303,7 +303,7 @@ get_header();?>
           </label>
           <div class="grid grid-rows-[0fr] transition-all duration-150 ease-in-out peer-checked/option-1:grid-rows-[1fr]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div class="min-h-[0px] overflow-hidden">
-              <div class="mt-2 p-4 border-slate-900 rounded" itemprop="text">Description 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, laudantium.</div>
+              <div class="mt-2 p-4 border-slate-900 rounded" itemprop="text">Perspiciatis, laudantium.</div>
             </div>
           </div>
         </li>
