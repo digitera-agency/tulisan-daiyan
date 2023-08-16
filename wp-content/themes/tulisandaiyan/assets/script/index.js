@@ -178,3 +178,23 @@ document.addEventListener("scroll", event => {
 }, { passive: true });
   // 7 * 300
   // 16 * 150
+
+window.onload = function() {
+  // Simulating a successful operation after 3 seconds
+  setTimeout(function() {
+    // Get the loading element
+    const loadingElement = document.getElementById("loading");
+
+    // Add the fade-out animation by changing the opacity to 0
+    loadingElement.style.opacity = 0;
+
+    // Wait for the animation to finish (0.5 seconds) before hiding the loading element
+    setTimeout(function() {
+      loadingElement.style.display = "none";
+      
+      // Add your code to show the rest of the page or execute other actions after loading and fade-out here
+
+    }, 500); // 500 milliseconds = 0.5 seconds
+
+  }, 3000); // 3000 milliseconds = 3 seconds
+};

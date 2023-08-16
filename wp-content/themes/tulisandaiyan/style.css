@@ -2,7 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/avenir');
 @import url('https://fonts.cdnfonts.com/css/ahellya');
 
-                
+
 :root {
     --color-pink: #F7D2DE;
     --color-red: #D91C5B;
@@ -70,36 +70,59 @@ body {
     top: -130px;
     right: -100px;
 }
+
 .min-w-100 {
     min-width: 350px;
 }
 
-#typeOne .Typewriter__cursor{
+#typeOne .Typewriter__cursor {
     color: transparent;
 }
 
 .fade-in {
-  animation: fadeIn 2s;
-  -webkit-animation: fadeIn 2s;
-  -moz-animation: fadeIn 2s;
-  -o-animation: fadeIn 2s;
-  -ms-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
 }
 
 .fade-out {
-  animation: fadeOut 2s;
-  -webkit-animation: fadeIn 2s;
-  -moz-animation: fadeIn 2s;
-  -o-animation: fadeIn 2s;
-  -ms-animation: fadeIn 2s;
-  opacity: 0;
+    animation: fadeOut 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+    opacity: 0;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
+
 @keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 24px;
+    color: #333;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
 }

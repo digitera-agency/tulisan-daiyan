@@ -8,17 +8,20 @@
  */
 
 get_header();?>
+
+<div id="loading" class="loading"><img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo-loading.png" alt=""></div>
+
 <section class="pt-[100px] md:pt-0">
-    <div class="md:h-screen py-[100px] md:py-0">
-      <div class="flex h-full items-center justify-center">
-        <div class="block relative min-w-100">
-          <h1 id="typeOne" class="w-full"></h1>
-          <h2 id="typeTwo"></h2>
-          <img class="star" src="<?php bloginfo('stylesheet_directory');?>/assets/img/star.png" alt="">
-        </div>
+  <div class="md:h-screen py-[100px] md:py-0">
+    <div class="flex h-full items-center justify-center">
+      <div class="block relative min-w-100">
+        <h1 id="typeOne" class="w-full"></h1>
+        <h2 id="typeTwo"></h2>
+        <img class="star" src="<?php bloginfo('stylesheet_directory');?>/assets/img/star.png" alt="">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <section>
   <div class="py-[50px] md:py-[100px]">
