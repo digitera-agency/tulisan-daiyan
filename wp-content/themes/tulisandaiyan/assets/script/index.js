@@ -1,3 +1,4 @@
+AOS.init();
 const seconds = document.querySelector(".seconds .number"),
   minutes = document.querySelector(".minutes .number"),
   hours = document.querySelector(".hours .number"),
@@ -86,36 +87,6 @@ if (faqs.length != 0) {
   });
 }
 
-var counted = 0;
-$(window).scroll(function() {
-  var oTop = $('#counter').offset().top - window.innerHeight;
-  if (counted == 0 && $(window).scrollTop() > oTop) {
-    $('.count').each(function() {
-      var $this = $(this),
-        countTo = $this.attr('data-count');
-      $({
-        countNum: $this.text()
-      }).animate({
-          countNum: countTo
-        },
-
-        {
-
-          duration: 2000,
-          easing: 'swing',
-          step: function() {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function() {
-            $this.text(this.countNum);
-            //alert('finished');
-          }
-
-        });
-    });
-    counted = 1;
-  }
-});
 
 document.addEventListener("DOMContentLoaded", function() {
   const collapseButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
@@ -196,3 +167,48 @@ window.onload = function() {
 
   }, 2000); // 3000 milliseconds = 3 seconds
 };
+
+$(document).ready(function() {
+  var sections = $('.counter');
+  var windowHeight = $(window).height();
+
+  $(window).scroll(function() {
+    var scrollTop = $(window).scrollTop();
+
+    sections.each(function() {
+      var section = $(this);
+      var sectionTop = section.offset().top;
+      var sectionHeight = section.height();
+      var countElement = section.find('.count');
+      var countTo = parseInt(countElement.attr('data-count'));
+      
+      if (scrollTop >= sectionTop - windowHeight + sectionHeight && !countElement.hasClass('counted')) {
+        $({ countNum: 0 }).animate({
+          countNum: countTo
+        }, {
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            countElement.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            countElement.text(this.countNum);
+            countElement.addClass('counted');
+          }
+        });
+      }
+    });
+  });
+});
+
+var elements = document.getElementsByClassName('single-image');
+        for (let item of elements) {
+            lightGallery(item, {
+            thumbnail: true,
+            showZoomInOutIcons: true,
+            actualSize: false,
+            plugins: [lgZoom],
+            share:false,
+            mobileSettings :  { controls: true, showCloseIcon: true, download: false}
+            })
+        }
