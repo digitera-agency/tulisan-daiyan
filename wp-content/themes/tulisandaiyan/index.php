@@ -100,7 +100,7 @@ get_header();?>
           <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="1000"> 0 </span> copies</b>
         </div>
         <div>
-          <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 80.000</h3>
+          <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 80.00</h3>
         </div>
         <div class="mt-5">
           <a href="#" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
@@ -180,7 +180,7 @@ get_header();?>
           <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="1000"> 0 </span> copies</b>
         </div>
         <div>
-          <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 80.000</h3>
+          <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 80.00</h3>
         </div>
         <div class="mt-5">
           <a href="#" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>

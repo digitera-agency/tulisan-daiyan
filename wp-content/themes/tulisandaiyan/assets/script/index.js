@@ -162,6 +162,19 @@ typewriterTwo
   .pauseFor(5000)
   .start();
 
+const output = document.getElementById('navbar');
 
+output.style.visibility = "hidden";
+document.addEventListener("scroll", event => {
+  const scroll = window.scrollY;
+  if(scroll === 0) {
+    output.classList.remove("fade-in");
+    output.style.visibility = "hidden";
+  } else {
+    output.style.visibility = "visible";
+    output.classList.add("fade-in");
+    
+  }
+}, { passive: true });
   // 7 * 300
   // 16 * 150
