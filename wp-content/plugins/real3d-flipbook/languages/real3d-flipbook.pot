@@ -1,0 +1,510 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-10-13 12:32+0200\n"
+"PO-Revision-Date: 2021-10-11 15:09+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/Real3DFlipbook.php:113
+msgid "Loading..."
+msgstr ""
+
+#: includes/Real3DFlipbook.php:236
+msgid "Select flipbook to insert into post"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:238 includes/post-type.php:16
+#: includes/post-type.php:17 includes/post-type.php:18
+#: includes/post-type.php:19
+msgid "Real3D Flipbook"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:526 includes/Real3DFlipbook.php:527
+#: includes/Real3DFlipbook.php:547 includes/Real3DFlipbook.php:548
+#: includes/post-type.php:25
+msgid "Flipbooks"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:535 includes/Real3DFlipbook.php:536
+#: includes/Real3DFlipbook.php:555 includes/Real3DFlipbook.php:556
+msgid "Add new"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:563 includes/Real3DFlipbook.php:564
+msgid "Categories"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:571 includes/Real3DFlipbook.php:572
+#: includes/post-type.php:75
+msgid "Authors"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:579 includes/Real3DFlipbook.php:580
+msgid "Import / Export"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:601 includes/Real3DFlipbook.php:602
+msgid "Settings"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:682
+msgid "Insert Flipbook"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:684
+msgid "Default Flipbook (Global Settings)"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:697
+msgid "No flipbooks found. Create new flipbook or set flipbook source"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:701
+msgid "Flipbook source"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:702
+msgid ""
+"Select PDF or images from media library, or enter PDF URL. PDF needs to be "
+"on the same domain or CORS needs to be enabled."
+msgstr ""
+
+#: includes/Real3DFlipbook.php:707 includes/edit-flipbook-post.php:80
+#: includes/edit-flipbook.php:41
+msgid "Select PDF"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:708 includes/edit-flipbook-post.php:89
+#: includes/edit-flipbook.php:50
+msgid "Select images"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:713
+msgid "Flipbook settings"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:718 includes/Real3DFlipbook.php:728
+msgid "Default"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:726
+msgid "Show thumbnail"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:735
+msgid "CSS class"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:740
+msgid "Insert flipbook"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:891 includes/post-type.php:274
+msgid "Shortcode"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:904
+msgid "Normal"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:905
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/Real3DFlipbook.php:906
+msgid "Button"
+msgstr ""
+
+#: includes/activation.php:8
+msgid "Updating flipbooks..."
+msgstr ""
+
+#: includes/addons.php:10
+msgid "Add-ons"
+msgstr ""
+
+#: includes/addons.php:16
+msgid "Add more features to Real3D Flipbook"
+msgstr ""
+
+#: includes/addons.php:18
+msgid "Make Real3D Flipbook more powerful with add-ons"
+msgstr ""
+
+#: includes/addons.php:26
+msgid "Add-on Bundle"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:37 includes/general.php:14
+msgid "Toggle panel:"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:60
+msgid "Pages"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:61 includes/edit-flipbook-post.php:186
+#: includes/general.php:92
+msgid "Table of Contents"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:62 includes/general.php:40
+msgid "General"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:63 includes/general.php:41
+msgid "Lightbox"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:64 includes/general.php:42
+msgid "WebGL"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:65 includes/general.php:43
+msgid "Mobile"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:66 includes/general.php:44
+msgid "UI"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:67 includes/general.php:45
+msgid "Menu Buttons"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:68 includes/general.php:46
+msgid "Translate"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:72 includes/edit-flipbook.php:33
+msgid "Select PDF or images from media library, or enter PDF URL."
+msgstr ""
+
+#: includes/edit-flipbook-post.php:77 includes/edit-flipbook.php:38
+msgid "PDF Flipbook"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:81 includes/edit-flipbook.php:42
+msgid "PDF needs to be on the same domain or CORS needs to be enabled."
+msgstr ""
+
+#: includes/edit-flipbook-post.php:86
+msgid "JPG Flipbook"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:90 includes/edit-flipbook.php:51
+msgid "Create flipbook from images. Multiple file upload is enabled."
+msgstr ""
+
+#: includes/edit-flipbook-post.php:98
+msgid "Delete all pages"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:103
+msgid ""
+"Create custom Table of Contents. This overrides default PDF outline or "
+"table of contents created by page titles."
+msgstr ""
+
+#: includes/edit-flipbook-post.php:105
+msgid "Add item"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:106
+msgid "Delete all"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:124 includes/general.php:63
+msgid ""
+"Override settings for mobile devices (use different view mode, smaller "
+"textures ect)"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:146 includes/general.php:130
+msgid "Advanced settings"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:147 includes/general.php:131
+msgid "Override layout and skin settings"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:151 includes/general.php:135
+msgid "Skin"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:152 includes/general.php:136
+msgid "Flipbook background"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:153 includes/general.php:137
+msgid "Top Menu"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:154 includes/general.php:138
+msgid "Bottom Menu"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:155 includes/general.php:139
+msgid "Buttons"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:156 includes/general.php:140
+msgid "Floating Buttons (on transparent menu)"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:157 includes/general.php:141
+msgid "Side navigation buttons"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:158 includes/general.php:142
+msgid "Close lightbox button"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:159 includes/general.php:143
+msgid "Sidebar"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:174 includes/general.php:80
+msgid "Menu buttons"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:178 includes/general.php:84
+msgid "Current page"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:179 includes/general.php:85
+msgid "First page"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:180 includes/general.php:86
+msgid "Previous page"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:181 includes/general.php:87
+msgid "Next page"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:182 includes/general.php:88
+msgid "Last page"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:183 includes/general.php:89
+msgid "Autoplay"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:184 includes/general.php:90
+msgid "Zoom In"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:185 includes/general.php:91
+msgid "Zoom Out"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:187 includes/general.php:93
+msgid "Thumbnails"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:188 includes/general.php:94
+msgid "Share"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:189 includes/general.php:95
+msgid "Print"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:190 includes/general.php:96
+msgid "Download pages"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:191 includes/general.php:97
+msgid "Download PDF"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:192 includes/general.php:98
+msgid "Sound"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:193 includes/general.php:99
+msgid "Fullscreen"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:194 includes/general.php:100
+msgid "Select Tool"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:195 includes/general.php:101
+#: includes/post-type.php:26
+msgid "Search"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:196 includes/general.php:102
+msgid "Bookmark"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:201 includes/general.php:107
+msgid "Social share buttons"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:206 includes/general.php:112
+msgid "Share on Whatsapp"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:207 includes/general.php:113
+msgid "Share on Twitter"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:208 includes/general.php:114
+msgid "Share on Facebook"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:209 includes/general.php:115
+msgid "Share on Pinterest"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:210 includes/general.php:116
+msgid "Share by Email"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:231
+msgid "Close media panel"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:236
+msgid "Edit previous media item"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:237
+msgid "Edit next media item"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:238
+msgid "Close dialog"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:241
+msgid "Edit page"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:253
+msgid "Replace image"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:263 includes/post-type.php:273
+msgid "Title"
+msgstr ""
+
+#: includes/edit-flipbook-post.php:268
+msgid "HTLM content"
+msgstr ""
+
+#: includes/edit-flipbook.php:9 includes/general.php:32
+msgid "Back to flipbooks list"
+msgstr ""
+
+#: includes/general.php:34
+msgid "Global settings"
+msgstr ""
+
+#: includes/general.php:35
+msgid "Global default settings for all flipbooks"
+msgstr ""
+
+#: includes/general.php:47
+msgid "Advanced"
+msgstr ""
+
+#: includes/general.php:167
+msgid "Rest to defaults"
+msgstr ""
+
+#: includes/post-type.php:20
+msgid "Add New"
+msgstr ""
+
+#: includes/post-type.php:21
+msgid "Add New Flipbook"
+msgstr ""
+
+#: includes/post-type.php:22
+msgid "New Book"
+msgstr ""
+
+#: includes/post-type.php:23
+msgid "Edit Book"
+msgstr ""
+
+#: includes/post-type.php:24
+msgid "View Book"
+msgstr ""
+
+#: includes/post-type.php:27
+msgid "Parent Book:"
+msgstr ""
+
+#: includes/post-type.php:28
+msgid "Flipbook Not found."
+msgstr ""
+
+#: includes/post-type.php:29
+msgid "Flipbook Not found in Trash."
+msgstr ""
+
+#: includes/post-type.php:34
+msgid "Description."
+msgstr ""
+
+#: includes/post-type.php:69
+msgid "Search Authors"
+msgstr ""
+
+#: includes/post-type.php:70
+msgid "All Authors"
+msgstr ""
+
+#: includes/post-type.php:71
+msgid "Edit Author"
+msgstr ""
+
+#: includes/post-type.php:72
+msgid "Update Author"
+msgstr ""
+
+#: includes/post-type.php:73
+msgid "Add New Author"
+msgstr ""
+
+#: includes/post-type.php:74
+msgid "New Author"
+msgstr ""
+
+#: includes/post-type.php:272
+msgid "Cover"
+msgstr ""
+
+#: includes/post-type.php:276
+msgid "Date"
+msgstr ""
+
+#: includes/post-type.php:277
+msgid "Author"
+msgstr ""
+
+#: includes/single-r3d.php:31
+msgid ""
+"<style type=\"text/css\">header, footer{display:none !important;}</style>"
+msgstr ""
+
+#: includes/single-r3d.php:38
+msgid "Forbidden"
+msgstr ""
