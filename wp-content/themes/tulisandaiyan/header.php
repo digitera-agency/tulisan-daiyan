@@ -18,7 +18,7 @@
     
 ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/assets/img/logo.png">
+<link rel="icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/assets/img/n-logo.png">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" />
