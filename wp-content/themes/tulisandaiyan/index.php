@@ -205,8 +205,8 @@ get_header();?>
                 <p class="font-butler text-[18px] md:text-[24px] font-[500]">26 Aug 10 AM</p>
             </div>
         </div>
-        <div class="my-4">
-          <svg class="relative mx-auto" width="24" height="184" viewBox="0 0 24 184" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="my-4 h-[80px] md:h-auto relative overflow-hidden">
+          <svg class="absolute left-[50%] md:left-[0px] translate-x-[-50%] md:translate-x-0 bottom-0 md:bottom-auto md:relative mx-auto" width="24" height="184" viewBox="0 0 24 184" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2H10.5ZM13.0607 183.061C12.4749 183.646 11.5251 183.646 10.9393 183.061L1.3934 173.515C0.807611 172.929 0.807611 171.979 1.3934 171.393C1.97919 170.808 2.92893 170.808 3.51472 171.393L12 179.879L20.4853 171.393C21.0711 170.808 22.0208 170.808 22.6066 171.393C23.1924 171.979 23.1924 172.929 22.6066 173.515L13.0607 183.061ZM13.5 2L13.5 86.375H10.5L10.5 2H13.5ZM13.5 86.375L13.5 182H10.5L10.5 86.375H13.5Z" fill="#282828"/>
           </svg>
         </div>
@@ -223,8 +223,8 @@ get_header();?>
                 <p class="font-butler text-[18px] md:text-[24px] font-[500]">9 - 12 Sept</p>
             </div>
         </div>
-        <div class="my-4">
-          <svg class="relative mx-auto" width="24" height="184" viewBox="0 0 24 184" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="my-4 h-[80px] md:h-auto relative overflow-hidden">
+          <svg class="absolute left-[50%] md:left-[0px] translate-x-[-50%] md:translate-x-0 bottom-0 md:bottom-auto md:relative mx-auto" width="24" height="184" viewBox="0 0 24 184" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2H10.5ZM13.0607 183.061C12.4749 183.646 11.5251 183.646 10.9393 183.061L1.3934 173.515C0.807611 172.929 0.807611 171.979 1.3934 171.393C1.97919 170.808 2.92893 170.808 3.51472 171.393L12 179.879L20.4853 171.393C21.0711 170.808 22.0208 170.808 22.6066 171.393C23.1924 171.979 23.1924 172.929 22.6066 173.515L13.0607 183.061ZM13.5 2L13.5 86.375H10.5L10.5 2H13.5ZM13.5 86.375L13.5 182H10.5L10.5 86.375H13.5Z" fill="#282828"/>
           </svg>
         </div>
@@ -242,8 +242,8 @@ get_header();?>
                 <p class="font-butler text-[18px] md:text-[24px] font-[500]">13 - 20 Sept</p>
             </div>
         </div>
-        <div class="my-4">
-          <svg class="relative mx-auto" width="24" height="184" viewBox="0 0 24 184" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="my-4 h-[80px] md:h-auto relative overflow-hidden">
+          <svg class="absolute left-[50%] md:left-[0px] translate-x-[-50%] md:translate-x-0 bottom-0 md:bottom-auto md:relative mx-auto" width="24" height="184" viewBox="0 0 24 184" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2H10.5ZM13.0607 183.061C12.4749 183.646 11.5251 183.646 10.9393 183.061L1.3934 173.515C0.807611 172.929 0.807611 171.979 1.3934 171.393C1.97919 170.808 2.92893 170.808 3.51472 171.393L12 179.879L20.4853 171.393C21.0711 170.808 22.0208 170.808 22.6066 171.393C23.1924 171.979 23.1924 172.929 22.6066 173.515L13.0607 183.061ZM13.5 2L13.5 86.375H10.5L10.5 2H13.5ZM13.5 86.375L13.5 182H10.5L10.5 86.375H13.5Z" fill="#282828"/>
           </svg>
         </div>
