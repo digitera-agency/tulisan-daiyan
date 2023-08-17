@@ -41,7 +41,7 @@ const timeFunction = setInterval(() => {
 }, 1000); //1000ms = 1s
 
 
-$('#lightSlider').lightSlider({
+$('.lightSlider').lightSlider({
     gallery: true,
     controls: false,
     item: 1,
@@ -50,7 +50,7 @@ $('#lightSlider').lightSlider({
     thumbItem: 4
 });
 
-$('#lightSlider2').lightSlider({
+$('.lightSlider2').lightSlider({
     gallery: true,
     controls: false,
     item: 1,

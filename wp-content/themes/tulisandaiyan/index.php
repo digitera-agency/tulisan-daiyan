@@ -7,7 +7,16 @@
 
  */
 
-get_header();?>
+get_header();
+
+$section_1 = get_field('section_1');
+$synopsis = get_field('synopsis');
+$spesification = get_field('spesification');
+$pakcgae = get_field('pakcgae');
+$meet_author = get_field('meet_author');
+$faq = get_field('faq');
+
+?>
 <section class="pt-[100px] md:pt-0">
     <div class="md:h-screen py-[100px] md:py-0">
       <div class="flex h-full items-center justify-center">
@@ -20,13 +29,16 @@ get_header();?>
     </div>
   </section>
 
+  <?php
+  if($section_1):
+  ?>
 <section>
   <div class="py-[50px] md:py-[100px]">
-    <img class="m-auto" src="<?php bloginfo('stylesheet_directory');?>/assets/img/section-book.png" alt="" data-aos="fade-up" data-aos-duration="1500">
-    <img class="m-auto" src="<?php bloginfo('stylesheet_directory');?>/assets/img/ttd-section-book.png" alt="" data-aos="fade-up" data-aos-duration="1500">
+    <img class="m-auto" src="<?= $section_1['image_1']['url'] ?>" alt="" data-aos="fade-up" data-aos-duration="1500">
+    <img class="m-auto" src="<?= $section_1['image_2']['url'] ?>" alt="" data-aos="fade-up" data-aos-duration="1500">
   </div>
 </section>
-
+<?php endif; ?>
 <section class="bg-[#282828]">
   <div>
     <div class="text-center py-[50px] md:py-[100px]">
@@ -65,99 +77,110 @@ get_header();?>
     </div>
   </div>
 </section>
-
+<?php
+if($synopsis):
+?>
 <section id="synopsis" class="bg-[#EDEBE4]">
   <div class="h-full py-[50px] md:py-[100px] md:py-[0] delimiter">
     <div class="flex h-full items-center single-image">
-      <a class="w-full" href="<?php bloginfo('stylesheet_directory');?>/assets/img/synopsis.png">
-        <img class="m-auto md:h-screen object-contain" src="<?php bloginfo('stylesheet_directory');?>/assets/img/synopsis.png" alt="" data-aos="fade-up" data-aos-duration="1500">
+      <a class="w-full" href="<?= $synopsis['image_synopsis']['url']; ?>">
+        <img class="m-auto md:h-screen object-contain" src="<?= $synopsis['image_synopsis']['url']; ?>" alt="" data-aos="fade-up" data-aos-duration="1500">
       </a>
     </div>
   </div>
 </section>
-
+<?php endif; ?>
+<?php if($spesification):?>
 <section class="py-[50px]">
   <div class="h-full delimiter">
     <h2 class="font-medium text-[32px] md:text-[48px] font-butler text-center" data-aos="fade-up" data-aos-duration="1500">Book Specification</h2>
     <div class="flex h-full py-2 items-center single-image">
-      <a class="w-full" href="<?php bloginfo('stylesheet_directory');?>/assets/img/book-spek.png">
-        <img class="m-auto md:h-screen object-contain" src="<?php bloginfo('stylesheet_directory');?>/assets/img/book-spek.png" alt="" data-aos="fade-up" data-aos-duration="1500">
+      <a class="w-full" href="<?= $spesification['image_specification']['url'] ?>">
+        <img class="m-auto md:h-screen object-contain" src="<?= $spesification['image_specification']['url'] ?>" alt="" data-aos="fade-up" data-aos-duration="1500">
       </a>
     </div>
   </div>
 </section>
+<?php endif; ?>
 
-<section id="package" class="bg-[#EDEBE4]">
+<?php if($pakcgae):
+  $count=0;
+  foreach ($pakcgae as $list) :
+    if ($count++ % 2 == 0) {?>
+        <section id="package" class="bg-[#EDEBE4]">
   <div class="delimiter py-[50px] md:py-[100px]">
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div data-aos="fade-up" data-aos-duration="1500">
-        <h2 class="font-butler text-[32px] md:text-[48px] font-medium">Full Moon Package</h2>
+        <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?></h2>
         <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
         </svg>
-          <ul class="list-disc ps-4 text-[#555] py-[50px]">
-            <li class="leading-10">Tulisan Hard Cover</li>
-            <li class="leading-10">Daiyan’s Autograph</li>
-            <li class="leading-10">Tulisan Gift Box</li>
-            <li class="leading-10">Daiyan’s Special Letter</li>
-            <li class="leading-10">8 pcs Exclusive Photo Cards</li>
-          </ul>
+        <div class="cus-ul ps-4 text-[#555] py-[50px]">
+          <?= $list['deskripsi_package']?>
+        </div>
         <div class="pb-[30px] counter">
-          <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="1000"> 0 </span> copies</b>
+          <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="<?= $list['copies_number']?>"> 0 </span> copies</b>
         </div>
         <div>
-          <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 80.00</h3>
+          <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent"><?= $list['price']?></h3>
         </div>
         <div class="mt-5">
           <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
         </div>
       </div>
-      <div class="demo pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
-        <div id="lightSlider" class="single-image">
-            <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/1.png" data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/1.png">
-                <img class="w-full h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/1.png" />
-            </a>
-            <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/2.png" data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/2.png">
-                <img class="w-full h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/2.png" />
-            </a>
-            <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/3.png" data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/3.png">
-                <img class="w-full h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/3.png" />
-            </a>
-            <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/4.png" data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/4.png">
-              <img class="w-full h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/4.png" />
-            </a>
+      <?php if($list['single_image']){ ?>
+        <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
+          <a href="<?= $list['single_image']['url'] ?>">
+            <img src="<?= $list['single_image']['url'] ?>" alt="">
+          </a>
         </div>
-      </div>
+        <?php }else{ ?>
+          <div class="demo pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
+            <div id="lightSlider" class="single-image lightSlider">
+            <?php foreach( $list['image_package'] as $image ): ?>
+              <a href="<?= $image['url'] ?>" data-thumb="<?= $image['url'] ?>">
+              <img class="w-full h-full" src="<?= $image['url'] ?>" />
+              </a>
+          <?php endforeach; ?>
+           </div>
+          </div>
+        <?php } ?>
     </div>
   </div>
 </section>
-<section class="delimiter py-[50px] md:py-[100px]">
+    <?php } else { ?>
+      <section class="delimiter py-[50px] md:py-[100px]">
   <div class="grid grid-cols-1 md:grid-cols-2">
-    <div class="demo pt-[50px] md:pt-[0px] order-last md:order-first" data-aos="fade-up" data-aos-duration="1500">
-      <ul id="lightSlider2" class="single-image">
-          <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/1.png" data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/1.png">
-              <img class="w-full h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/1.png" />
-          </a>
-          <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/2.png" data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/2.png">
-              <img class="w-full h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/2.png" />
-          </a>
-      </ul>
+    <?php if($list['single_image']){ ?>
+    <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
+      <a href="<?= $list['single_image']['url'] ?>">
+        <img src="<?= $list['single_image']['url'] ?>" alt="">
+      </a>
     </div>
+    <?php }else{ ?>
+      <div class="demo pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
+        <div id="lightSlider" class="single-image lightSlider">
+        <?php foreach( $list['image_package'] as $image ): ?>
+          <a href="<?= $image['url'] ?>" data-thumb="<?= $image['url'] ?>">
+          <img class="w-full h-full" src="<?= $image['url'] ?>" />
+          </a>
+      <?php endforeach; ?>
+        </div>
+      </div>
+    <?php } ?>
     <div class="md:px-[100px]" data-aos="fade-up" data-aos-duration="1500">
-      <h2 class="font-butler text-[32px] md:text-[48px] font-medium">Crescent Package</h2>
+      <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?></h2>
       <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
       </svg>
-        <ul class="list-disc ps-4 text-[#555] py-[50px]">
-          <li class="leading-10">Tulisan Hard Cover</li>
-          <li class="leading-10">Daiyan’s Autograph</li>
-          <li class="leading-10">Daiyan’s Special Letter</li>
-        </ul>
+      <div class="cus-ul ps-4 text-[#555] py-[50px]">
+          <?= $list['deskripsi_package']?>
+        </div>
       <div class="pb-[30px] counter">
-        <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="500"> 0 </span> copies</b>
+        <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="<?= $list['copies_number']?>"> 0 </span> copies</b>
       </div>
       <div>
-        <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 65.00</h3>
+        <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent"><?= $list['price']?></h3>
       </div>
       <div class="mt-5">
         <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
@@ -165,36 +188,9 @@ get_header();?>
     </div>
   </div>
 </section>
-<section class="bg-[#EDEBE4]">
-  <div class="delimiter py-[50px] md:py-[100px]">
-    <div class="grid grid-cols-1 md:grid-cols-2">
-    <div data-aos="fade-up" data-aos-duration="1500">
-        <h2 class="font-butler text-[32px] md:text-[48px] font-medium">Eclipse Package</h2>
-        <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
-        </svg>
-          <ul class="list-disc ps-4 text-[#555] py-[50px]">
-            <li class="leading-10">Tulisan Hard Cover</li>
-            <li class="leading-10">Daiyan’s Autograph</li>
-          </ul>
-        <div class="pb-[30px] counter">
-          <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="500"> 0 </span> copies</b>
-        </div>
-        <div>
-          <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent">RM 55.00</h3>
-        </div>
-        <div class="mt-5">
-          <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
-        </div>
-      </div>
-      <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
-        <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-a/1.png">
-          <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-a/1.png" alt="">
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+    <?php } ?>
+
+<?php endforeach; endif;?>
 <section id="timeline" class="bg-[#F3F2EC]">
   <div class="delimiter py-[50px] md:py-[100px]">
     <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Pre Order Timeline</h2>
@@ -290,59 +286,42 @@ get_header();?>
   </div>
 </section>
 
+<?php if($meet_author['url']):?>
 <section>
   <div class="h-full pt-[50px] md:pt-0">
     <div class="flex h-full items-center single-image">
-      <a class="w-full" href="<?php bloginfo('stylesheet_directory');?>/assets/img/profile.png"><img class="m-auto md:h-screen" src="<?php bloginfo('stylesheet_directory');?>/assets/img/profile.png" alt="" data-aos="fade-up" data-aos-duration="1500"></a>
+      <a class="w-full" href="<?= $meet_author['url'] ?>"><img class="m-auto md:h-screen" src="<?= $meet_author['url'] ?>" alt="" data-aos="fade-up" data-aos-duration="1500"></a>
     </div>
   </div>
 </section>
-
+<?php endif;?>
+<?php if($faq):?>
 <section id="faq">
   <div itemscope itemtype="https://schema.org/FAQPage">
     <div class="py-[50px] md:py-[100px] delimiter mx-auto">
       <h1 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Frequently Ask Question </h1>
       <ul class="grid gap-6" data-list="faq">
+        <?php $c=0; foreach ($faq as $f) : ?>
         <li class="group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-aos="fade-up" data-aos-duration="1500">
-          <input class="peer/option-1 hidden" type="checkbox" id="checkbox-option-1" name="checkbox-options">
-          <label class="border-b-2 border-[#DADADA] peer-checked/option-1:bg-[#282828] peer-checked/option-1:text-white peer-checked/option-1:[&>svg]:rotate-45 block cursor-pointer p-4 pr-12 font-bold transition-all duration-150 ease-in-out relative" for="checkbox-option-1" itemprop="name">
-            PRE-ORDER & PRODUCT SPECIFICATION
+          <input class="peer/option-<?= $c ?> hidden" type="checkbox" id="checkbox-option-<?= $c ?>" name="checkbox-options">
+          <label class="border-b-2 border-[#DADADA] peer-checked/option-<?= $c ?>:bg-[#282828] peer-checked/option-<?= $c ?>:text-white peer-checked/option-<?= $c ?>:[&>svg]:rotate-45 block cursor-pointer p-4 pr-12 font-bold transition-all duration-150 ease-in-out relative" for="checkbox-option-<?= $c ?>" itemprop="name">
+            <?= $f['title_faq'] ?>
             <svg class="block absolute top-1/2 right-4 -mt-[11.5px] transition-all duration-150 ease-in-out" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11.5L21 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 1.5L11 21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </label>
-          <div class="grid grid-rows-[0fr] transition-all duration-150 ease-in-out peer-checked/option-1:grid-rows-[1fr]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="grid grid-rows-[0fr] transition-all duration-150 ease-in-out peer-checked/option-<?= $c ?>:grid-rows-[1fr]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div class="min-h-[0px] overflow-hidden">
-              <div class="mt-2 p-4 border-slate-900 rounded" itemprop="text">Perspiciatis, laudantium.</div>
+              <div class="mt-2 p-4 border-slate-900 rounded" itemprop="text">
+              <?= $f['deskripsi_faq'] ?>
+              </div>
             </div>
           </div>
         </li>
-        <li class="group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-aos="fade-up" data-aos-duration="1500">
-          <input class="peer/option-2 hidden" type="checkbox" id="checkbox-option-2" name="checkbox-options">
-          <label class="border-b-2 border-[#DADADA] peer-checked/option-2:bg-[#282828] peer-checked/option-2:text-white peer-checked/option-2:[&>svg]:rotate-45 block cursor-pointer p-4 pr-12 font-bold transition-all duration-150 ease-in-out relative" for="checkbox-option-2" itemprop="name">
-            PAYMENT
-            <svg class="block absolute top-1/2 right-4 -mt-[11.5px] transition-all duration-150 ease-in-out" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11.5L21 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 1.5L11 21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </label>
-          <div class="grid grid-rows-[0fr] transition-all duration-150 ease-in-out peer-checked/option-2:grid-rows-[1fr]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div class="min-h-[0px] overflow-hidden">
-              <div class="mt-2 p-4 border-slate-900 rounded" itemprop="text">Description 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, laudantium.</div>
-            </div>
-          </div>
-        </li>
-        <li class="group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-aos="fade-up" data-aos-duration="1500">
-          <input class="peer/option-3 hidden" type="checkbox" id="checkbox-option-3" name="checkbox-options">
-          <label class="border-b-2 border-[#DADADA] peer-checked/option-3:bg-[#282828] peer-checked/option-3:text-white peer-checked/option-3:[&>svg]:rotate-45 block cursor-pointer p-4 pr-12 font-bold transition-all duration-150 ease-in-out relative" for="checkbox-option-3" itemprop="name">
-            SHIPPING & REFUND
-            <svg class="block absolute top-1/2 right-4 -mt-[11.5px] transition-all duration-150 ease-in-out" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11.5L21 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 1.5L11 21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </label>
-          <div class="grid grid-rows-[0fr] transition-all duration-150 ease-in-out peer-checked/option-3:grid-rows-[1fr]" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div class="min-h-[0px] overflow-hidden">
-              <div class="mt-2 p-4 border-slate-900 rounded" itemprop="text">Description 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, laudantium.</div>
-            </div>
-          </div>
-        </li>
+        <?php $c++; endforeach; ?>
       </ul>
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 <section id="contact">
   <div class="text-center py-[50px] md:py-[100px]" data-aos="fade-up" data-aos-duration="1500">
