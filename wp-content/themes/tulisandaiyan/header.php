@@ -18,7 +18,7 @@
     
 ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/assets/img/logo.png">
+<link rel="icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/assets/img/n-logo.png">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" />
@@ -27,8 +27,8 @@
 </head>
 
 <body class="bg-[#FBF6F0]">
-
-<nav class="bg-[#FBF6F0] fixed w-full z-20 top-0 left-0 nav">
+<div id="loading" class="loading bg-[#FBF6F0]"><img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo-loading.png" alt=""></div>
+<nav id="navbar" class="bg-[#FBF6F0] fixed w-full z-20 top-0 left-0 nav">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="/" class="flex items-center">
       <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo.png" class="h-8 mr-3" alt="Logo">
@@ -63,7 +63,4 @@
   </div>
   </div>
 </nav>
-<script>
- 
-</script>
 <main>

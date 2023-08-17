@@ -134,34 +134,65 @@ $(document).ready(function () {
   });
 });
 
+const output = document.getElementById('navbar');
 
-const typeOne = document.getElementById('typeOne');
-const typeTwo = document.getElementById('typeTwo');
-
-const typewriterOne = new Typewriter(typeOne, {
-  loop: true, 
-  delay: 300,
-  deleteSpeed: 300,
-});
-
-const typewriterTwo = new Typewriter(typeTwo, {
-  loop: true,
-  delay: 130,
-  deleteSpeed: 130,
-});
-
-typewriterOne
-  .pauseFor(500)
-  .typeString('tulisan')
-  .pauseFor(4800)
-  .start();
-
-typewriterTwo
-  .pauseFor(670)
-  .typeString('by daiyan trisha')
-  .pauseFor(5000)
-  .start();
-
-
+output.style.visibility = "hidden";
+document.addEventListener("scroll", event => {
+  const scroll = window.scrollY;
+  if(scroll === 0) {
+    output.classList.remove("fade-in");
+    output.style.visibility = "hidden";
+  } else {
+    output.style.visibility = "visible";
+    output.classList.add("fade-in");
+    
+  }
+}, { passive: true });
   // 7 * 300
   // 16 * 150
+
+window.onload = function() {
+  // Simulating a successful operation after 3 seconds
+  setTimeout(function() {
+    // Get the loading element
+    const loadingElement = document.getElementById("loading");
+
+    // Add the fade-out animation by changing the opacity to 0
+    loadingElement.style.opacity = 0;
+
+    // Wait for the animation to finish (0.5 seconds) before hiding the loading element
+    setTimeout(function() {
+      loadingElement.style.display = "none";
+
+      const typeOne = document.getElementById('typeOne');
+      const typeTwo = document.getElementById('typeTwo');
+
+      const typewriterOne = new Typewriter(typeOne, {
+        loop: true, 
+        delay: 300,
+        deleteSpeed: 300,
+      });
+
+      const typewriterTwo = new Typewriter(typeTwo, {
+        loop: true,
+        delay: 130,
+        deleteSpeed: 130,
+      });
+
+      typewriterOne
+        .pauseFor(500)
+        .typeString('tulisan')
+        .pauseFor(4800)
+        .start();
+
+      typewriterTwo
+        .pauseFor(670)
+        .typeString('by daiyan trisha')
+        .pauseFor(5000)
+        .start();
+      // Add your code to show the rest of the page or execute other actions after loading and fade-out here
+
+    }, 500); // 500 milliseconds = 0.5 seconds
+
+  }, 2000); // 3000 milliseconds = 3 seconds
+};

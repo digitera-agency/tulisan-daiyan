@@ -19,6 +19,7 @@ html,
 body {
     margin: auto;
     font-family: 'avenir', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -73,6 +74,59 @@ body {
     min-width: 350px;
 }
 
-#typeOne .Typewriter__cursor{
+#typeOne .Typewriter__cursor {
     color: transparent;
+}
+
+.fade-in {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+
+.fade-out {
+    animation: fadeOut 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 24px;
+    color: #333;
+    opacity: 1;
+    position: absolute;
+    z-index: 99999999;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-out;
 }
