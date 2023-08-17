@@ -273,16 +273,16 @@ if($synopsis):
 <section id="preorder" class="delimiter py-[50px] md:py-[100px]">
   <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Full Moon Package</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 md:">
-   <a href="https://shopee.com.my/product/264375695/20682874406/" target="_blank" class="md:px-24 text-center" data-aos="fade-up" data-aos-duration="1500">
+   <div class="md:px-24 text-center" data-aos="fade-up" data-aos-duration="1500">
       <h3 class="font-butler text-[32px] md:text-[48px] font-normal text-center">Shopee</h3>
       <p class="text-[#74642F] text-[16px] md:text-[24px] py-6 font-normal leading-[28.8px]">For customers residing in Malaysia.</p>
-      <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/shoppe.png" class="w-[50%] md:w-auto m-auto" alt="">
-    </a> 
-   <a href="https://www.nukilanbiruni.com/product/tulisan-by-daiyan-trisha-hardcover-autograph-edition" target="_blank" class="md:px-24 text-center pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
+      <a href="https://shopee.com.my/product/264375695/20682874406/" target="_blank" ><img src="<?php bloginfo('stylesheet_directory');?>/assets/img/shoppe.png" class="w-[50%] md:w-auto m-auto" alt=""></a>
+    </div> 
+   <div class="md:px-24 text-center pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
     <h3 class="font-butler text-[32px] md:text-[48px] font-normal text-center">Website</h3>
     <p class="text-[#74642F] text-[16px] md:text-[24px] py-6 font-normal leading-[28.8px]">For customers residing in Malaysia & Overseas.</p>
-    <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/n-logo.png" class="w-[50%] md:w-auto m-auto" alt="">
-  </a> 
+    <a href="https://www.nukilanbiruni.com/product/tulisan-by-daiyan-trisha-hardcover-autograph-edition" target="_blank"><img src="<?php bloginfo('stylesheet_directory');?>/assets/img/n-logo.png" class="w-[50%] md:w-auto m-auto" alt=""></a>
+    </div> 
   </div>
 </section>
 
