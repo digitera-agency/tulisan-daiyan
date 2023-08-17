@@ -137,6 +137,7 @@ window.onload = function() {
 
       const typeOne = document.getElementById('typeOne');
       const typeTwo = document.getElementById('typeTwo');
+      const star = document.getElementById('star');
 
       const typewriterOne = new Typewriter(typeOne, {
         loop: true, 
@@ -153,7 +154,14 @@ window.onload = function() {
       typewriterOne
         .pauseFor(500)
         .typeString('tulisan')
+        .callFunction(() => {
+          star.style.opacity = 1;
+          star.style.transition = "all 1s"
+        })
         .pauseFor(4800)
+        .callFunction(() => {
+          star.style.opacity = 0;
+        })
         .start();
 
       typewriterTwo

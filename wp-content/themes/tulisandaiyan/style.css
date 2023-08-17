@@ -124,7 +124,7 @@ body {
     font-size: 24px;
     color: #333;
     opacity: 1;
-    position: absolute;
+    position: fixed;
     z-index: 99999999;
     width: 100%;
     top: 0;
@@ -139,4 +139,8 @@ body {
 .cus-ul ul li{
     line-height: 3rem;
     font-size: 18px;
+}
+
+#star {
+    opacity: 0;
 }
