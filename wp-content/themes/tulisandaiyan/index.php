@@ -8,31 +8,30 @@
  */
 
 get_header();?>
-
 <section class="pt-[100px] md:pt-0">
-  <div class="md:h-screen py-[100px] md:py-0">
-    <div class="flex h-full items-center justify-center">
-      <div class="block relative min-w-100">
-        <h1 id="typeOne" class="w-full"></h1>
-        <h2 id="typeTwo"></h2>
-        <img class="star" src="<?php bloginfo('stylesheet_directory');?>/assets/img/star.png" alt="">
+    <div class="md:h-screen py-[100px] md:py-0">
+      <div class="flex h-full items-center justify-center">
+        <div class="block relative min-w-100">
+          <h1 id="typeOne" class="w-full"></h1>
+          <h2 id="typeTwo"></h2>
+          <img class="star" src="<?php bloginfo('stylesheet_directory');?>/assets/img/star.png" alt="">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 <section>
   <div class="py-[50px] md:py-[100px]">
-    <img class="m-auto" src="<?php bloginfo('stylesheet_directory');?>/assets/img/section-book.png" alt="">
-    <img class="m-auto" src="<?php bloginfo('stylesheet_directory');?>/assets/img/ttd-section-book.png" alt="">
+    <img class="m-auto" src="<?php bloginfo('stylesheet_directory');?>/assets/img/section-book.png" alt="" data-aos="fade-up" data-aos-duration="1500">
+    <img class="m-auto" src="<?php bloginfo('stylesheet_directory');?>/assets/img/ttd-section-book.png" alt="" data-aos="fade-up" data-aos-duration="1500">
   </div>
 </section>
 
 <section class="bg-[#282828]">
   <div>
     <div class="text-center py-[50px] md:py-[100px]">
-      <h2 class="text-[32px] md:text-[48px] font-light text-white font-butler">Ready To Launch In...</h2>
-      <div class="flex gap-[10px] md:gap-[30px] items-top justify-center pt-[25px] md:pt-[50px]">
+      <h2 class="text-[32px] md:text-[48px] font-light text-white font-butler" data-aos="fade-up" data-aos-duration="1500">Ready To Launch In...</h2>
+      <div class="flex gap-[10px] md:gap-[30px] items-top justify-center pt-[25px] md:pt-[50px]" data-aos="fade-up" data-aos-duration="1500">
         <div class="days">
           <span class="capitalize w-fit mx-auto relative right-[10px] pb-[15px] md:pb-[30px] block text-white font-medium text-[14px]">days</span>
           <div class="font-medium text-[42px] md:text-[72px] text-white"><span class="number"></span> <span>:</span></div>
@@ -50,7 +49,7 @@ get_header();?>
           <div class="font-medium text-[42px] md:text-[72px] text-white"><span class="number"></span></div>
         </div>
       </div>
-      <div class="pt-[25px] md:pt-[50px]">
+      <div class="pt-[25px] md:pt-[50px]" data-aos="fade-up" data-aos-duration="1500">
         <b class="text-center text-white font-bold text-[16px]">PRE ORDER ON 26 AUG (10:00)</b>
       </div>      
     </div>
@@ -59,33 +58,39 @@ get_header();?>
 
 <section>
   <div class="h-full py-[50px] md:py-[100px] md:py-[0] delimiter">
-    <div class="flex h-full items-center">
-      <img class="m-auto md:h-screen object-contain" src="<?php bloginfo('stylesheet_directory');?>/assets/img/slider-book.png" alt="">
+    <div class="flex h-full items-center single-image">
+      <a class="w-full" href="<?php bloginfo('stylesheet_directory');?>/assets/img/slider-book.png">
+        <img class="m-auto md:h-screen object-contain" src="<?php bloginfo('stylesheet_directory');?>/assets/img/slider-book.png" alt=""  data-aos="fade-up" data-aos-duration="1500">
+      </a>      
     </div>
   </div>
 </section>
 
 <section id="synopsis" class="bg-[#EDEBE4]">
   <div class="h-full py-[50px] md:py-[100px] md:py-[0] delimiter">
-    <div class="flex h-full items-center">
-      <img class="m-auto md:h-screen object-contain" src="<?php bloginfo('stylesheet_directory');?>/assets/img/synopsis.png" alt="">
+    <div class="flex h-full items-center single-image">
+      <a class="w-full" href="<?php bloginfo('stylesheet_directory');?>/assets/img/synopsis.png">
+        <img class="m-auto md:h-screen object-contain" src="<?php bloginfo('stylesheet_directory');?>/assets/img/synopsis.png" alt="" data-aos="fade-up" data-aos-duration="1500">
+      </a>
     </div>
   </div>
 </section>
 
 <section class="py-[50px]">
   <div class="h-full delimiter">
-    <h2 class="font-medium text-[32px] md:text-[48px] font-butler text-center">Book Specification</h2>
-    <div class="flex h-full py-2 items-center">
-      <img class="m-auto md:h-screen object-contain" src="<?php bloginfo('stylesheet_directory');?>/assets/img/book-spek.png" alt="">
+    <h2 class="font-medium text-[32px] md:text-[48px] font-butler text-center" data-aos="fade-up" data-aos-duration="1500">Book Specification</h2>
+    <div class="flex h-full py-2 items-center single-image">
+      <a class="w-full" href="<?php bloginfo('stylesheet_directory');?>/assets/img/book-spek.png">
+        <img class="m-auto md:h-screen object-contain" src="<?php bloginfo('stylesheet_directory');?>/assets/img/book-spek.png" alt="" data-aos="fade-up" data-aos-duration="1500">
+      </a>
     </div>
   </div>
 </section>
 
 <section id="package" class="bg-[#EDEBE4]">
   <div class="delimiter py-[50px] md:py-[100px]">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-32 md:h-screen">
-      <div>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      <div data-aos="fade-up" data-aos-duration="1500">
         <h2 class="font-butler text-[32px] md:text-[48px] font-medium">Full Moon Package</h2>
         <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
@@ -97,7 +102,7 @@ get_header();?>
             <li class="leading-10">Daiyan’s Special Letter</li>
             <li class="leading-10">8 pcs Exclusive Photo Cards</li>
           </ul>
-        <div id="counter" class="pb-[30px]">
+        <div class="pb-[30px] counter">
           <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="1000"> 0 </span> copies</b>
         </div>
         <div>
@@ -107,38 +112,38 @@ get_header();?>
           <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
         </div>
       </div>
-      <div class="demo pt-[50px] md:pt-[0px]">
-        <ul id="lightSlider">
-            <li data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/1.png">
+      <div class="demo pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
+        <div id="lightSlider" class="single-image">
+            <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/1.png" data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/1.png">
                 <img class="w-full h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/1.png" />
-            </li>
-            <li data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/2.png">
+            </a>
+            <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/2.png" data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/2.png">
                 <img class="w-full h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/2.png" />
-            </li>
-            <li data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/3.png">
+            </a>
+            <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/3.png" data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/3.png">
                 <img class="w-full h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/3.png" />
-            </li>
-            <li data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/4.png">
+            </a>
+            <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/4.png" data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/4.png">
               <img class="w-full h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-c/4.png" />
-          </li>
-        </ul>
+            </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 <section class="delimiter py-[50px] md:py-[100px]">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-32 md:h-screen">
-    <div class="demo pt-[50px] md:pt-[0px] order-last md:order-first">
-      <ul id="lightSlider2">
-          <li data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/1.png">
+  <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="demo pt-[50px] md:pt-[0px] order-last md:order-first" data-aos="fade-up" data-aos-duration="1500">
+      <ul id="lightSlider2" class="single-image">
+          <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/1.png" data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/1.png">
               <img class="w-full h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/1.png" />
-          </li>
-          <li data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/2.png">
+          </a>
+          <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/2.png" data-thumb="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/2.png">
               <img class="w-full h-full" src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-b/2.png" />
-          </li>
+          </a>
       </ul>
     </div>
-    <div>
+    <div class="md:px-[100px]" data-aos="fade-up" data-aos-duration="1500">
       <h2 class="font-butler text-[32px] md:text-[48px] font-medium">Crescent Package</h2>
       <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
@@ -148,7 +153,7 @@ get_header();?>
           <li class="leading-10">Daiyan’s Autograph</li>
           <li class="leading-10">Daiyan’s Special Letter</li>
         </ul>
-      <div id="counter" class="pb-[30px]">
+      <div class="pb-[30px] counter">
         <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="500"> 0 </span> copies</b>
       </div>
       <div>
@@ -162,8 +167,8 @@ get_header();?>
 </section>
 <section class="bg-[#EDEBE4]">
   <div class="delimiter py-[50px] md:py-[100px]">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-32 md:h-screen">
-    <div>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+    <div data-aos="fade-up" data-aos-duration="1500">
         <h2 class="font-butler text-[32px] md:text-[48px] font-medium">Eclipse Package</h2>
         <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
@@ -172,7 +177,7 @@ get_header();?>
             <li class="leading-10">Tulisan Hard Cover</li>
             <li class="leading-10">Daiyan’s Autograph</li>
           </ul>
-        <div id="counter" class="pb-[30px]">
+        <div class="pb-[30px] counter">
           <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="500"> 0 </span> copies</b>
         </div>
         <div>
@@ -182,17 +187,19 @@ get_header();?>
           <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
         </div>
       </div>
-      <div class="pt-[50px] md:pt-[0px]">
-        <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-a/1.png" alt="">
+      <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
+        <a href="<?php bloginfo('stylesheet_directory');?>/assets/img/package-a/1.png">
+          <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/package-a/1.png" alt="">
+        </a>
       </div>
     </div>
   </div>
 </section>
 <section id="timeline" class="bg-[#F3F2EC]">
   <div class="delimiter py-[50px] md:py-[100px]">
-    <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[100px]">Pre Order Timeline</h2>
+    <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Pre Order Timeline</h2>
     <div class="max-w-screen-lg w-full mx-auto">
-        <div class="flex items-center justify-center w-full">
+        <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
             <div class="w-full max-w-[20rem] text-right">
                 <p class="font-butler text-[18px] md:text-[24px] font-[500]">Launch</p>
             </div>
@@ -210,7 +217,7 @@ get_header();?>
             <path d="M10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2H10.5ZM13.0607 183.061C12.4749 183.646 11.5251 183.646 10.9393 183.061L1.3934 173.515C0.807611 172.929 0.807611 171.979 1.3934 171.393C1.97919 170.808 2.92893 170.808 3.51472 171.393L12 179.879L20.4853 171.393C21.0711 170.808 22.0208 170.808 22.6066 171.393C23.1924 171.979 23.1924 172.929 22.6066 173.515L13.0607 183.061ZM13.5 2L13.5 86.375H10.5L10.5 2H13.5ZM13.5 86.375L13.5 182H10.5L10.5 86.375H13.5Z" fill="#282828"/>
           </svg>
         </div>
-        <div class="flex items-center justify-center w-full">
+        <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
             <div class="w-full max-w-[20rem] text-right">
                 <p class="font-butler text-[18px] md:text-[24px] font-[500]">Book Signing Period</p>
             </div>
@@ -228,7 +235,7 @@ get_header();?>
             <path d="M10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2H10.5ZM13.0607 183.061C12.4749 183.646 11.5251 183.646 10.9393 183.061L1.3934 173.515C0.807611 172.929 0.807611 171.979 1.3934 171.393C1.97919 170.808 2.92893 170.808 3.51472 171.393L12 179.879L20.4853 171.393C21.0711 170.808 22.0208 170.808 22.6066 171.393C23.1924 171.979 23.1924 172.929 22.6066 173.515L13.0607 183.061ZM13.5 2L13.5 86.375H10.5L10.5 2H13.5ZM13.5 86.375L13.5 182H10.5L10.5 86.375H13.5Z" fill="#282828"/>
           </svg>
         </div>
-        <div class="flex items-center justify-center w-full">
+        <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
             <div class="w-full max-w-[20rem] text-right">
                 <p class="font-butler text-[18px] md:text-[24px] font-[500]">Fulfilment Period</p>
             </div>
@@ -247,7 +254,7 @@ get_header();?>
             <path d="M10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2H10.5ZM13.0607 183.061C12.4749 183.646 11.5251 183.646 10.9393 183.061L1.3934 173.515C0.807611 172.929 0.807611 171.979 1.3934 171.393C1.97919 170.808 2.92893 170.808 3.51472 171.393L12 179.879L20.4853 171.393C21.0711 170.808 22.0208 170.808 22.6066 171.393C23.1924 171.979 23.1924 172.929 22.6066 173.515L13.0607 183.061ZM13.5 2L13.5 86.375H10.5L10.5 2H13.5ZM13.5 86.375L13.5 182H10.5L10.5 86.375H13.5Z" fill="#282828"/>
           </svg>
         </div>
-        <div class="flex items-center justify-center w-full">
+        <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
             <div class="w-full max-w-[20rem] text-right">
                 <p class="font-butler text-[18px] md:text-[24px] font-[500]">Received by</p>
             </div>
@@ -268,14 +275,14 @@ get_header();?>
 </section>
 
 <section id="preorder" class="delimiter py-[50px] md:py-[100px]">
-  <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]">Full Moon Package</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-32">
-   <a href="https://shopee.com.my/product/264375695/20682874406/" target="_blank" class="md:px-24 text-center">
+  <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Full Moon Package</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 md:">
+   <a href="https://shopee.com.my/product/264375695/20682874406/" target="_blank" class="md:px-24 text-center" data-aos="fade-up" data-aos-duration="1500">
       <h3 class="font-butler text-[32px] md:text-[48px] font-normal text-center">Shopee</h3>
       <p class="text-[#74642F] text-[16px] md:text-[24px] py-6 font-normal leading-[28.8px]">For customers residing in Malaysia.</p>
       <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/shoppe.png" class="w-[50%] md:w-auto m-auto" alt="">
     </a> 
-   <a href="https://www.nukilanbiruni.com/product/tulisan-by-daiyan-trisha-hardcover-autograph-edition" target="_blank" class="md:px-24 text-center pt-[50px] md:pt-[0px]">
+   <a href="https://www.nukilanbiruni.com/product/tulisan-by-daiyan-trisha-hardcover-autograph-edition" target="_blank" class="md:px-24 text-center pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
     <h3 class="font-butler text-[32px] md:text-[48px] font-normal text-center">Website</h3>
     <p class="text-[#74642F] text-[16px] md:text-[24px] py-6 font-normal leading-[28.8px]">For customers residing in Malaysia & Overseas.</p>
     <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/n-logo.png" class="w-[50%] md:w-auto m-auto" alt="">
@@ -285,8 +292,8 @@ get_header();?>
 
 <section>
   <div class="h-full pt-[50px] md:pt-0">
-    <div class="flex h-full items-center">
-      <img class="m-auto md:h-screen" src="<?php bloginfo('stylesheet_directory');?>/assets/img/profile.png" alt="">
+    <div class="flex h-full items-center single-image">
+      <a class="w-full" href="<?php bloginfo('stylesheet_directory');?>/assets/img/profile.png"><img class="m-auto md:h-screen" src="<?php bloginfo('stylesheet_directory');?>/assets/img/profile.png" alt="" data-aos="fade-up" data-aos-duration="1500"></a>
     </div>
   </div>
 </section>
@@ -294,9 +301,9 @@ get_header();?>
 <section id="faq">
   <div itemscope itemtype="https://schema.org/FAQPage">
     <div class="py-[50px] md:py-[100px] delimiter mx-auto">
-      <h1 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]">Frequently Ask Question </h1>
+      <h1 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Frequently Ask Question </h1>
       <ul class="grid gap-6" data-list="faq">
-        <li class="group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <li class="group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-aos="fade-up" data-aos-duration="1500">
           <input class="peer/option-1 hidden" type="checkbox" id="checkbox-option-1" name="checkbox-options">
           <label class="border-b-2 border-[#DADADA] peer-checked/option-1:bg-[#282828] peer-checked/option-1:text-white peer-checked/option-1:[&>svg]:rotate-45 block cursor-pointer p-4 pr-12 font-bold transition-all duration-150 ease-in-out relative" for="checkbox-option-1" itemprop="name">
             PRE-ORDER & PRODUCT SPECIFICATION
@@ -308,7 +315,7 @@ get_header();?>
             </div>
           </div>
         </li>
-        <li class="group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <li class="group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-aos="fade-up" data-aos-duration="1500">
           <input class="peer/option-2 hidden" type="checkbox" id="checkbox-option-2" name="checkbox-options">
           <label class="border-b-2 border-[#DADADA] peer-checked/option-2:bg-[#282828] peer-checked/option-2:text-white peer-checked/option-2:[&>svg]:rotate-45 block cursor-pointer p-4 pr-12 font-bold transition-all duration-150 ease-in-out relative" for="checkbox-option-2" itemprop="name">
             PAYMENT
@@ -320,7 +327,7 @@ get_header();?>
             </div>
           </div>
         </li>
-        <li class="group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <li class="group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-aos="fade-up" data-aos-duration="1500">
           <input class="peer/option-3 hidden" type="checkbox" id="checkbox-option-3" name="checkbox-options">
           <label class="border-b-2 border-[#DADADA] peer-checked/option-3:bg-[#282828] peer-checked/option-3:text-white peer-checked/option-3:[&>svg]:rotate-45 block cursor-pointer p-4 pr-12 font-bold transition-all duration-150 ease-in-out relative" for="checkbox-option-3" itemprop="name">
             SHIPPING & REFUND
@@ -338,7 +345,7 @@ get_header();?>
 </section>
 
 <section id="contact">
-  <div class="text-center py-[50px] md:py-[100px]">
+  <div class="text-center py-[50px] md:py-[100px]" data-aos="fade-up" data-aos-duration="1500">
     <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center">Still have Question?</h2>
     <p class="py-[25px]">We're here for you! How can we help?</p>
     <div class="pt-3"><a href="https://wa.link/85mxoo" target="_blank" class="bg-[#10A37F] rounded-full px-6 py-3 w-fit text-white text-[16px]">Chat Us <img class="inline-block w-4 mb-[5px] ml-[2px]" src="<?php bloginfo('stylesheet_directory');?>/assets/img/send-icon.png" alt=""></a></div>
