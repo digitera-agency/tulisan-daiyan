@@ -150,7 +150,7 @@ if($synopsis):
 </section>
     <?php } else { ?>
       <section class="delimiter py-[50px] md:py-[100px]">
-  <div class="grid grid-cols-1 md:grid-cols-2">
+  <div class="grid grid-cols-1 md:grid-cols-2 md:order-first">
     <?php if($list['single_image']){ ?>
     <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
       <a href="<?= $list['single_image']['url'] ?>">
@@ -168,7 +168,7 @@ if($synopsis):
         </div>
       </div>
     <?php } ?>
-    <div class="md:px-[100px]" data-aos="fade-up" data-aos-duration="1500">
+    <div class="md:px-[100px] order-first md:order-last" data-aos="fade-up" data-aos-duration="1500">
       <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?></h2>
       <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
