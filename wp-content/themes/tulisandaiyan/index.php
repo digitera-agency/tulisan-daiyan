@@ -36,7 +36,7 @@ $dateLaunch = get_field('dateLaunch');
   if($section_1):
 ?>
 <section>
-  <div class="py-[50px] md:py-[100px]">
+  <div class="py-[70px] md:py-[100px]">
     <img class="m-auto" src="<?= $section_1['image_1']['url'] ?>" alt="" data-aos="fade-up" data-aos-duration="1500">
     <img class="m-auto" src="<?= $section_1['image_2']['url'] ?>" alt="" data-aos="fade-up" data-aos-duration="1500">
   </div>
@@ -44,7 +44,7 @@ $dateLaunch = get_field('dateLaunch');
 <?php endif; ?>
 <section class="bg-[#282828]">
   <div>
-    <div class="text-center py-[50px] md:py-[100px]">
+    <div class="text-center py-[70px] md:py-[100px]">
       <h2 class="text-[32px] md:text-[48px] font-light text-white font-butler" data-aos="fade-up" data-aos-duration="1500">Ready To Launch In...</h2>
       <div class="flex gap-[10px] md:gap-[30px] items-top justify-center pt-[25px] md:pt-[50px]" data-aos="fade-up" data-aos-duration="1500">
         <div class="days">
@@ -65,7 +65,7 @@ $dateLaunch = get_field('dateLaunch');
         </div>
       </div>
       <div class="pt-[25px] md:pt-[50px]" data-aos="fade-up" data-aos-duration="1500">
-        <b class="text-center text-white font-bold text-[16px]">PRE ORDER ON <?= date('F j, Y, g:i a', strtotime($dateLaunch)) ?></b>
+        <b class="text-center text-white font-bold text-[16px]">PRE ORDER ON <?= date('F j (g:i a)', strtotime($dateLaunch)) ?></b>
       </div>      
     </div>
   </div>
@@ -80,7 +80,7 @@ $dateLaunch = get_field('dateLaunch');
 if($synopsis):
 ?>
 <section id="synopsis" class="bg-[#EDEBE4]">
-  <div class="h-full py-[50px] md:py-[100px] md:py-[0] delimiter">
+  <div class="h-full py-[70px] md:py-[100px] md:py-[0] delimiter">
     <div class="flex h-full items-center single-image">
       <a class="w-full" href="<?= $synopsis['image_synopsis']['url']; ?>">
         <img class="m-auto md:h-screen object-contain" src="<?= $synopsis['image_synopsis']['url']; ?>" alt="" data-aos="fade-up" data-aos-duration="1500">
@@ -107,7 +107,7 @@ if($synopsis):
   foreach ($pakcgae as $list) :
     if ($count++ % 2 == 0) {?>
         <section id="package" class="bg-[#EDEBE4]">
-  <div class="delimiter py-[50px] md:py-[100px]">
+  <div class="delimiter py-[70px] md:py-[100px]">
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div data-aos="fade-up" data-aos-duration="1500">
         <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?></h2>
@@ -148,7 +148,7 @@ if($synopsis):
   </div>
 </section>
     <?php } else { ?>
-      <section class="delimiter py-[50px] md:py-[100px]">
+      <section class="delimiter py-[70px] md:py-[100px]">
   <div class="grid grid-cols-1 md:grid-cols-2 md:order-first">
     <?php if($list['single_image']){ ?>
     <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
@@ -191,7 +191,7 @@ if($synopsis):
 
 <?php endforeach; endif;?>
 <section id="timeline" class="bg-[#F3F2EC]">
-  <div class="delimiter py-[50px] md:py-[100px]">
+  <div class="delimiter py-[70px] md:py-[100px]">
     <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Pre Order Timeline</h2>
     <div class="max-w-screen-lg w-full mx-auto">
         <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
@@ -269,7 +269,7 @@ if($synopsis):
   </div>
 </section>
 
-<section id="preorder" class="delimiter py-[50px] md:py-[100px]">
+<section id="preorder" class="delimiter py-[70px] md:py-[100px]">
   <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Where To Pre Order?</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 md:">
    <div class="md:px-24 text-center" data-aos="fade-up" data-aos-duration="1500">
@@ -297,7 +297,7 @@ if($synopsis):
 <?php if($faq):?>
 <section id="faq" data-aos="fade-up" data-aos-duration="1500">
   <div itemscope itemtype="https://schema.org/FAQPage">
-    <div class="py-[50px] md:py-[100px] delimiter mx-auto">
+    <div class="py-[70px] md:py-[100px] delimiter mx-auto">
       <h1 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]">Frequently Ask Question </h1>
       <ul class="grid gap-6" data-list="faq">
         <?php $c=0; foreach ($faq as $f) : ?>
@@ -323,7 +323,7 @@ if($synopsis):
 <?php endif; ?>
 
 <section id="contact">
-  <div class="text-center py-[50px] md:py-[100px]" data-aos="fade-up" data-aos-duration="1500">
+  <div class="text-center py-[70px] md:py-[100px]" data-aos="fade-up" data-aos-duration="1500">
     <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center">Still have Question?</h2>
     <p class="py-[25px]">We're here for you! How can we help?</p>
     <div class="pt-3"><a href="https://wa.link/85mxoo" target="_blank" class="bg-[#10A37F] rounded-full px-6 py-3 w-fit text-white text-[16px]">Chat Us <img class="inline-block w-4 mb-[5px] ml-[2px]" src="<?php bloginfo('stylesheet_directory');?>/assets/img/send-icon.png" alt=""></a></div>
