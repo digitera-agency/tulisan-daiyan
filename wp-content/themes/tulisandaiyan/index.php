@@ -70,10 +70,8 @@ $doc = get_field('doc');
 </section>
 
 <section>
-  <div class="h-screen delimiter">
-    <div class="flex h-full items-center single-image">
-      <?php echo do_shortcode($doc)?>    
-    </div>
+  <div class="h-screen">
+    <?php echo do_shortcode($doc)?>
   </div>
 </section>
 <?php
