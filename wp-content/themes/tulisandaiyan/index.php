@@ -15,6 +15,7 @@ $spesification = get_field('spesification');
 $pakcgae = get_field('pakcgae');
 $meet_author = get_field('meet_author');
 $faq = get_field('faq');
+$doc = get_field('doc');
 
 ?>
 <section class="pt-[100px] md:pt-0 overflow-hidden">
@@ -71,9 +72,7 @@ $faq = get_field('faq');
 <section>
   <div class="h-full py-[50px] md:py-[100px] md:py-[0] delimiter">
     <div class="flex h-full items-center single-image">
-      <a class="w-full" href="<?php bloginfo('stylesheet_directory');?>/assets/img/slider-book.png">
-        <img class="m-auto md:h-screen object-contain" src="<?php bloginfo('stylesheet_directory');?>/assets/img/slider-book.png" alt=""  data-aos="fade-up" data-aos-duration="1500">
-      </a>      
+      <?php echo do_shortcode($doc)?>    
     </div>
   </div>
 </section>
