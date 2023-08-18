@@ -5,8 +5,8 @@ const seconds = document.querySelector(".seconds .number"),
   days = document.querySelector(".days .number");
 const dateLaunched = document.getElementById('dateLaunch');
 
-  
-const dateLaunch = new Date(dateLaunched);
+  console.log("@dateLaunched", dateLaunched)
+const dateLaunch = new Date(dateLaunched.value);
 const dateNow = new Date();
 const differenceInMilliseconds = dateLaunch - dateNow;
 const calcseconds = Math.floor(differenceInMilliseconds / 1000) % 60;
@@ -61,7 +61,6 @@ $('.lightSlider2').lightSlider({
     thumbItem: 4
 });
 
-console.clear();
 const faqs = document.querySelectorAll('[data-list="faq"]');
 if (faqs.length != 0) {
   faqs.forEach(function (faq, index) {
