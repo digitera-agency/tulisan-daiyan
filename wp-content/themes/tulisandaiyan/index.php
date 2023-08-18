@@ -65,7 +65,7 @@ $dateLaunch = get_field('dateLaunch');
         </div>
       </div>
       <div class="pt-[25px] md:pt-[50px]" data-aos="fade-up" data-aos-duration="1500">
-        <b class="text-center text-white font-bold text-[16px]">PRE ORDER ON <?php date('F j, Y, g:i a', strtotime($dateLaunch)) ?></b>
+        <b class="text-center text-white font-bold text-[16px]">PRE ORDER ON <?= date('F j, Y, g:i a', strtotime($dateLaunch)) ?></b>
       </div>      
     </div>
   </div>
@@ -295,13 +295,13 @@ if($synopsis):
 </section>
 <?php endif;?>
 <?php if($faq):?>
-<section id="faq">
+<section id="faq" data-aos="fade-up" data-aos-duration="1500">
   <div itemscope itemtype="https://schema.org/FAQPage">
     <div class="py-[50px] md:py-[100px] delimiter mx-auto">
-      <h1 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Frequently Ask Question </h1>
+      <h1 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]">Frequently Ask Question </h1>
       <ul class="grid gap-6" data-list="faq">
         <?php $c=0; foreach ($faq as $f) : ?>
-        <li class="group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" data-aos="fade-up" data-aos-duration="1500">
+        <li class="group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
           <input class="peer/option-<?= $c ?> hidden" type="checkbox" id="checkbox-option-<?= $c ?>" name="checkbox-options">
           <label class="border-b-2 border-[#DADADA] peer-checked/option-<?= $c ?>:bg-[#282828] peer-checked/option-<?= $c ?>:text-white peer-checked/option-<?= $c ?>:[&>svg]:rotate-45 block cursor-pointer p-4 pr-12 font-bold transition-all duration-150 ease-in-out relative" for="checkbox-option-<?= $c ?>" itemprop="name">
             <?= $f['title_faq'] ?>
