@@ -3,8 +3,10 @@ const seconds = document.querySelector(".seconds .number"),
   minutes = document.querySelector(".minutes .number"),
   hours = document.querySelector(".hours .number"),
   days = document.querySelector(".days .number");
+const dateLaunched = document.getElementById('dateLaunch');
 
-const dateLaunch = new Date("2023-08-26");
+  
+const dateLaunch = new Date(dateLaunched);
 const dateNow = new Date();
 const differenceInMilliseconds = dateLaunch - dateNow;
 const calcseconds = Math.floor(differenceInMilliseconds / 1000) % 60;
@@ -122,59 +124,61 @@ document.addEventListener("scroll", event => {
   // 7 * 300
   // 16 * 150
 
-window.onload = function() {
-  // Simulating a successful operation after 3 seconds
-  setTimeout(function() {
-    // Get the loading element
-    const loadingElement = document.getElementById("loading");
+// window.onload = function() {
+//   // Simulating a successful operation after 3 seconds
+//   setTimeout(function() {
+//     // Get the loading element
+//     const loadingElement = document.getElementById("loading");
 
-    // Add the fade-out animation by changing the opacity to 0
-    loadingElement.style.opacity = 0;
+//     // Add the fade-out animation by changing the opacity to 0
+//     loadingElement.style.opacity = 0;
 
-    // Wait for the animation to finish (0.5 seconds) before hiding the loading element
-    setTimeout(function() {
-      loadingElement.style.display = "none";
+//     // Wait for the animation to finish (0.5 seconds) before hiding the loading element
+//     setTimeout(function() {
+//       loadingElement.style.display = "none";
 
-      const typeOne = document.getElementById('typeOne');
-      const typeTwo = document.getElementById('typeTwo');
-      const star = document.getElementById('star');
+      
+//       // Add your code to show the rest of the page or execute other actions after loading and fade-out here
 
-      const typewriterOne = new Typewriter(typeOne, {
-        loop: true, 
-        delay: 300,
-        deleteSpeed: 300,
-      });
+//     }, 500); // 500 milliseconds = 0.5 seconds
 
-      const typewriterTwo = new Typewriter(typeTwo, {
-        loop: true,
-        delay: 130,
-        deleteSpeed: 130,
-      });
+//   }, 2000); // 3000 milliseconds = 3 seconds
+// };
 
-      typewriterOne
-        .pauseFor(500)
-        .typeString('tulisan')
-        .callFunction(() => {
-          star.style.opacity = 1;
-          star.style.transition = "all 1s"
-        })
-        .pauseFor(4800)
-        .callFunction(() => {
-          star.style.opacity = 0;
-        })
-        .start();
+const typeOne = document.getElementById('typeOne');
+const typeTwo = document.getElementById('typeTwo');
+const star = document.getElementById('star');
 
-      typewriterTwo
-        .pauseFor(670)
-        .typeString('by daiyan trisha')
-        .pauseFor(5000)
-        .start();
-      // Add your code to show the rest of the page or execute other actions after loading and fade-out here
+const typewriterOne = new Typewriter(typeOne, {
+  loop: true, 
+  delay: 300,
+  deleteSpeed: 300,
+});
 
-    }, 500); // 500 milliseconds = 0.5 seconds
+const typewriterTwo = new Typewriter(typeTwo, {
+  loop: true,
+  delay: 130,
+  deleteSpeed: 130,
+});
 
-  }, 2000); // 3000 milliseconds = 3 seconds
-};
+typewriterOne
+  .pauseFor(500)
+  .typeString('tulisan')
+  .callFunction(() => {
+    star.style.opacity = 1;
+    star.style.transition = "all 1s"
+  })
+  .pauseFor(4800)
+  .callFunction(() => {
+    star.style.opacity = 0;
+  })
+  .start();
+
+typewriterTwo
+  .pauseFor(670)
+  .typeString('by daiyan trisha')
+  .pauseFor(5000)
+  .start();
 
 $(document).ready(function() {
   var sections = $('.counter');

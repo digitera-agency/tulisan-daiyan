@@ -16,23 +16,25 @@ $pakcgae = get_field('pakcgae');
 $meet_author = get_field('meet_author');
 $faq = get_field('faq');
 $doc = get_field('doc');
+$dateLaunch = get_field('dateLaunch');
 
 ?>
-<section class="pt-[100px] md:pt-0 overflow-hidden">
-    <div class="md:h-screen py-[100px] md:py-0">
-      <div class="flex h-full items-center justify-center">
-        <div class="block relative min-w-100">
-          <h1 id="typeOne" class="w-full"></h1>
-          <h2 id="typeTwo"></h2>
-          <img id="star" class="star" src="<?php bloginfo('stylesheet_directory');?>/assets/img/star.png" alt="">
-        </div>
+<input type="hidden" id="dateLaunch" value="<?= $dateLaunch ?>">
+<section class="overflow-hidden">
+  <div class="h-screen">
+    <div class="flex h-full items-center justify-center">
+      <div class="block relative min-w-100">
+        <h1 id="typeOne" class="w-full"></h1>
+        <h2 id="typeTwo"></h2>
+        <img id="star" class="star" src="<?php bloginfo('stylesheet_directory');?>/assets/img/star.png" alt="">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <?php
+<?php
   if($section_1):
-  ?>
+?>
 <section>
   <div class="py-[50px] md:py-[100px]">
     <img class="m-auto" src="<?= $section_1['image_1']['url'] ?>" alt="" data-aos="fade-up" data-aos-duration="1500">
@@ -63,7 +65,7 @@ $doc = get_field('doc');
         </div>
       </div>
       <div class="pt-[25px] md:pt-[50px]" data-aos="fade-up" data-aos-duration="1500">
-        <b class="text-center text-white font-bold text-[16px]">PRE ORDER ON 26 AUG (10:00)</b>
+        <b class="text-center text-white font-bold text-[16px]">PRE ORDER ON <?php date('F j, Y, g:i a', strtotime($dateLaunch)) ?></b>
       </div>      
     </div>
   </div>
@@ -268,7 +270,7 @@ if($synopsis):
 </section>
 
 <section id="preorder" class="delimiter py-[50px] md:py-[100px]">
-  <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Full Moon Package</h2>
+  <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Where To Pre Order?</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 md:">
    <div class="md:px-24 text-center" data-aos="fade-up" data-aos-duration="1500">
       <h3 class="font-butler text-[32px] md:text-[48px] font-normal text-center">Shopee</h3>
