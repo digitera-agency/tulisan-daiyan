@@ -70,7 +70,7 @@ $doc = get_field('doc');
 </section>
 
 <section>
-  <div class="h-screen">
+  <div class="py-8">
     <?php echo do_shortcode($doc)?>
   </div>
 </section>
