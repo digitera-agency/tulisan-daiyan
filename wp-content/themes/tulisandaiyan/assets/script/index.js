@@ -98,14 +98,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-$(document).ready(function () {
-  $(".nav ul a").on("click", function (e) {
-    e.preventDefault();
-    const href = $(this).attr("href");
-    $("html, body").animate({ scrollTop: $(href).offset().top }, 800);
-  });
-});
-
 const output = document.getElementById('navbar');
 
 output.style.visibility = "hidden";
