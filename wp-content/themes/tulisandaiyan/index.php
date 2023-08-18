@@ -65,7 +65,7 @@ $dateLaunch = get_field('dateLaunch');
         </div>
       </div>
       <div class="pt-[25px] md:pt-[50px]" data-aos="fade-up" data-aos-duration="1500">
-        <b class="text-center text-white font-bold text-[16px]">PRE ORDER ON <?= date('F j, Y, g:i a', strtotime($dateLaunch)) ?></b>
+        <b class="text-center text-white font-bold text-[16px]">PRE ORDER ON <?= date('F j (g:i a)', strtotime($dateLaunch)) ?></b>
       </div>      
     </div>
   </div>
