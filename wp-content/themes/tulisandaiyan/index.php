@@ -294,8 +294,9 @@ if($synopsis):
   </div>
 </section>
 <?php endif;?>
+<div id="faq" class="pt-[70px] md:pt-[100px]"></div>
 <?php if($faq):?>
-<section id="faq" class="py-[70px] md:py-[100px]" data-aos="fade-up" data-aos-duration="1500">
+<section class="pb-[70px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">
   <div itemscope itemtype="https://schema.org/FAQPage">
     <div class="delimiter mx-auto">
       <h1 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]">Frequently Ask Question </h1>
