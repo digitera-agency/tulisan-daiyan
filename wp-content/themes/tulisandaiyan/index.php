@@ -190,8 +190,8 @@ if($synopsis):
     <?php } ?>
 
 <?php endforeach; endif;?>
-<section id="timeline" class="bg-[#F3F2EC]">
-  <div class="delimiter py-[70px] md:py-[100px]">
+<section id="timeline" class="bg-[#F3F2EC] py-[70px] md:py-[100px]">
+  <div class="delimiter">
     <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Pre Order Timeline</h2>
     <div class="max-w-screen-lg w-full mx-auto">
         <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
@@ -295,9 +295,9 @@ if($synopsis):
 </section>
 <?php endif;?>
 <?php if($faq):?>
-<section id="faq" data-aos="fade-up" data-aos-duration="1500">
+<section id="faq" class="py-[70px] md:py-[100px]" data-aos="fade-up" data-aos-duration="1500">
   <div itemscope itemtype="https://schema.org/FAQPage">
-    <div class="py-[70px] md:py-[100px] delimiter mx-auto">
+    <div class="delimiter mx-auto">
       <h1 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]">Frequently Ask Question </h1>
       <ul class="grid gap-6" data-list="faq">
         <?php $c=0; foreach ($faq as $f) : ?>
