@@ -7,7 +7,7 @@ const dateLaunched = document.getElementById('dateLaunch');
 
   console.log("@dateLaunched", dateLaunched)
 const dateLaunch = new Date(dateLaunched.value);
-const dateNow = new Date();
+const dateNow = new Date().toUTCString();
 const differenceInMilliseconds = dateLaunch - dateNow;
 const calcseconds = Math.floor(differenceInMilliseconds / 1000) % 60;
 const calcminutes = Math.floor(differenceInMilliseconds / (1000 * 60)) % 60;
