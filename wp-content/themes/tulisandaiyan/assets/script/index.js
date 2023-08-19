@@ -11,7 +11,9 @@ const dateNow = new Date().toUTCString();
 
 // Convert the UTC time to GMT+8 timezone by adding 8 hours
 const dateNowGMT8 = new Date(dateNow);
+console.log("@dateNowGMT8", dateNowGMT8)
 dateNowGMT8.setHours(dateNowGMT8.getHours() + 8);
+console.log("@dateNowGMT8", dateNowGMT8)
 const differenceInMilliseconds = dateLaunch - dateNowGMT8;
 const calcseconds = Math.floor(differenceInMilliseconds / 1000) % 60;
 const calcminutes = Math.floor(differenceInMilliseconds / (1000 * 60)) % 60;
