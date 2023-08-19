@@ -17,22 +17,33 @@ let secValue = calcseconds > 0 ? calcseconds : 0,
     dayValue = calcdays > 0 ? calcdays : 0;
 
 const timeFunction = setInterval(() => {
-  secValue--;
+  console.log("@Value", secValue, minValue, hourValue, dayValue)
 
   if (secValue === 0) {
-    minValue--;
-    secValue = 60;
+    if(minValue === 0) {
+      secValue = 0
+    } else {
+      minValue--;
+      secValue = 60;
+    }
+  } else {
+    secValue--;
   }
   if (minValue === 0) {
-    hourValue--;
-    minValue = 60;
+    if (hourValue === 0) {
+      minValue = 0;
+    } else {
+      hourValue--;
+      minValue = 60;
+    }
   }
   if (hourValue === 0) {
-    dayValue--;
-    hourValue = 24;
-  }
-  if (dayValue === 0) {
-    clearInterval(timeFunction);
+    if (dayValue === 0) {
+      hourValue = 0;
+    } else {
+      dayValue--;
+      hourValue = 24;
+    }
   }
   seconds.textContent = secValue < 10 ? `0${secValue}` : secValue;
   minutes.textContent = minValue < 10 ? `0${minValue}` : minValue;
