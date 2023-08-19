@@ -11,10 +11,10 @@ const calcseconds = Math.floor(differenceInMilliseconds / 1000) % 60;
 const calcminutes = Math.floor(differenceInMilliseconds / (1000 * 60)) % 60;
 const calchours = Math.floor(differenceInMilliseconds / (1000 * 60 * 60)) % 24;
 const calcdays = Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24));
-let secValue = calcseconds,
-    minValue = calcminutes,
-    hourValue = calchours,
-    dayValue = calcdays;
+let secValue = calcseconds > 0 ? calcseconds : 0,
+    minValue = calcminutes > 0 ? calcminutes : 0,
+    hourValue = calchours > 0 ? calchours: 0,
+    dayValue = calcdays > 0 ? calcdays : 0;
 
 const timeFunction = setInterval(() => {
   secValue--;
