@@ -80,7 +80,7 @@ $dateLaunch = get_field('dateLaunch');
 if($synopsis):
 ?>
 <section id="synopsis" class="bg-[#EDEBE4]">
-  <div class="h-full py-[70px] md:py-[100px] md:py-[0] delimiter">
+  <div class="h-full py-[70px] md:py-[100px] md:py-[0]">
     <div class="flex h-full items-center single-image">
       <a class="w-full" href="<?= $synopsis['image_synopsis']['url']; ?>">
         <img class="m-auto md:h-screen object-contain" src="<?= $synopsis['image_synopsis']['url']; ?>" alt="" data-aos="fade-up" data-aos-duration="1500">
