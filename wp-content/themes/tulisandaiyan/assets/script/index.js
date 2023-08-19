@@ -4,17 +4,9 @@ const seconds = document.querySelector(".seconds .number"),
   hours = document.querySelector(".hours .number"),
   days = document.querySelector(".days .number");
 const dateLaunched = document.getElementById('dateLaunch');
-
-  console.log("@dateLaunched", dateLaunched)
 const dateLaunch = new Date(dateLaunched.value);
-const dateNow = new Date().toUTCString();
-
-// Convert the UTC time to GMT+8 timezone by adding 8 hours
-const dateNowGMT8 = new Date(dateNow);
-console.log("@dateNowGMT8", dateNowGMT8)
-dateNowGMT8.setHours(dateNowGMT8.getHours() + 8);
-console.log("@dateNowGMT8", dateNowGMT8)
-const differenceInMilliseconds = dateLaunch - dateNowGMT8;
+const dateNow = new Date();
+const differenceInMilliseconds = dateLaunch - dateNow;
 const calcseconds = Math.floor(differenceInMilliseconds / 1000) % 60;
 const calcminutes = Math.floor(differenceInMilliseconds / (1000 * 60)) % 60;
 const calchours = Math.floor(differenceInMilliseconds / (1000 * 60 * 60)) % 24;
