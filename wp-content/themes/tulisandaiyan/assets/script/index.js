@@ -40,11 +40,13 @@ const timeFunction = setInterval(() => {
   if (hourValue === 0) {
     if (dayValue === 0) {
       hourValue = 0;
+      dayValue = 0;
     } else {
       dayValue--;
       hourValue = 24;
     }
   }
+  
   seconds.textContent = secValue < 10 ? `0${secValue}` : secValue;
   minutes.textContent = minValue < 10 ? `0${minValue}` : minValue;
   hours.textContent = hourValue < 10 ? `0${hourValue}` : hourValue;
