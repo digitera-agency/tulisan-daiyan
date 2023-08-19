@@ -24,7 +24,7 @@ const timeFunction = setInterval(() => {
       secValue = 0
     } else {
       minValue--;
-      secValue = 60;
+      secValue = 59;
     }
   } else {
     secValue--;
@@ -34,7 +34,7 @@ const timeFunction = setInterval(() => {
       minValue = 0;
     } else {
       hourValue--;
-      minValue = 60;
+      minValue = 59;
     }
   }
   if (hourValue === 0) {
@@ -43,10 +43,10 @@ const timeFunction = setInterval(() => {
       dayValue = 0;
     } else {
       dayValue--;
-      hourValue = 24;
+      hourValue = 23;
     }
   }
-  
+
   seconds.textContent = secValue < 10 ? `0${secValue}` : secValue;
   minutes.textContent = minValue < 10 ? `0${minValue}` : minValue;
   hours.textContent = hourValue < 10 ? `0${hourValue}` : hourValue;
