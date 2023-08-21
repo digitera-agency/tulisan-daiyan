@@ -27,6 +27,7 @@ $dateLaunch = get_field('dateLaunch');
         <h1 id="typeOne" class="w-full"></h1>
         <h2 id="typeTwo"></h2>
         <img id="star" class="star" src="<?php bloginfo('stylesheet_directory');?>/assets/img/star.png" alt="">
+        <img id="bulan" class="bulan" src="<?php bloginfo('stylesheet_directory');?>/assets/img/bulan.png" alt="">
       </div>
     </div>
   </div>
@@ -71,9 +72,10 @@ $dateLaunch = get_field('dateLaunch');
   </div>
 </section>
 
-<section>
+<section id="preview">
   <div class="lg:py-[100px] py-[30px]">
     <?php echo do_shortcode($doc)?>
+    <p class="text-center pt-[15px] block md:hidden">click to preview the book</p>
   </div>
 </section>
 <?php

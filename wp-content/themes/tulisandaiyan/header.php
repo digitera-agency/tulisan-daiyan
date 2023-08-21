@@ -47,6 +47,9 @@
   <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
     <ul class="lg:bg-[#FBF6F0] bg-[#282828] flex flex-col p-4 w-full lg:p-0 mt-4 font-medium border border-gray-100 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0">
       <li>
+        <a href="#preview" class="block py-2 pr-4 uppercase text-white lg:text-[#111]">preview</a>
+      </li>
+      <li>
         <a href="#synopsis" class="block py-2 pr-4 uppercase text-white lg:text-[#111]">synopsis</a>
       </li>
       <li>
