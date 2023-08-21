@@ -4,38 +4,49 @@ const seconds = document.querySelector(".seconds .number"),
   hours = document.querySelector(".hours .number"),
   days = document.querySelector(".days .number");
 const dateLaunched = document.getElementById('dateLaunch');
-
-  console.log("@dateLaunched", dateLaunched)
-const dateLaunch = new Date(dateLaunched.value);
+const dateLaunch = new Date(Number(dateLaunched.value));
 const dateNow = new Date();
-const differenceInMilliseconds = dateLaunch - dateNow;
+const differenceInMilliseconds = dateLaunch > dateNow ? dateLaunch - dateNow : 0;
 const calcseconds = Math.floor(differenceInMilliseconds / 1000) % 60;
 const calcminutes = Math.floor(differenceInMilliseconds / (1000 * 60)) % 60;
 const calchours = Math.floor(differenceInMilliseconds / (1000 * 60 * 60)) % 24;
 const calcdays = Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24));
-let secValue = calcseconds,
-    minValue = calcminutes,
-    hourValue = calchours,
-    dayValue = calcdays;
+let secValue = calcseconds > 0 ? calcseconds : 0,
+    minValue = calcminutes > 0 ? calcminutes : 0,
+    hourValue = calchours > 0 ? calchours: 0,
+    dayValue = calcdays > 0 ? calcdays : 0;
 
 const timeFunction = setInterval(() => {
-  secValue--;
+  console.log("@Value", secValue, minValue, hourValue, dayValue)
 
   if (secValue === 0) {
-    minValue--;
-    secValue = 60;
+    if(minValue === 0) {
+      secValue = 0
+    } else {
+      minValue--;
+      secValue = 59;
+    }
+  } else {
+    secValue--;
   }
   if (minValue === 0) {
-    hourValue--;
-    minValue = 60;
+    if (hourValue === 0) {
+      minValue = 0;
+    } else {
+      hourValue--;
+      minValue = 59;
+    }
   }
   if (hourValue === 0) {
-    dayValue--;
-    hourValue = 24;
+    if (dayValue === 0) {
+      hourValue = 0;
+      dayValue = 0;
+    } else {
+      dayValue--;
+      hourValue = 23;
+    }
   }
-  if (dayValue === 0) {
-    clearInterval(timeFunction);
-  }
+
   seconds.textContent = secValue < 10 ? `0${secValue}` : secValue;
   minutes.textContent = minValue < 10 ? `0${minValue}` : minValue;
   hours.textContent = hourValue < 10 ? `0${hourValue}` : hourValue;

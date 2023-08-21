@@ -17,9 +17,9 @@ $meet_author = get_field('meet_author');
 $faq = get_field('faq');
 $doc = get_field('doc');
 $dateLaunch = get_field('dateLaunch');
-
+$unixtimestamp = get_field('unixtimestamp');
 ?>
-<input type="hidden" id="dateLaunch" value="<?= $dateLaunch ?>">
+<input type="hidden" id="dateLaunch" value="<?= $unixtimestamp ?>">
 <section class="overflow-hidden">
   <div class="h-screen">
     <div class="flex h-full items-center justify-center">
@@ -66,7 +66,7 @@ $dateLaunch = get_field('dateLaunch');
         </div>
       </div>
       <div class="pt-[25px] md:pt-[50px]" data-aos="fade-up" data-aos-duration="1500">
-        <b class="text-center text-white font-bold text-[16px]">PRE ORDER ON <?= date('F j (g:i a)', strtotime($dateLaunch)) ?></b>
+        <b class="text-center text-white font-bold text-[16px]">PRE ORDER ON <?= date('F j (g:i)', strtotime($dateLaunch)) ?> GMT+8</b>
       </div>      
     </div>
   </div>
@@ -82,7 +82,7 @@ $dateLaunch = get_field('dateLaunch');
 if($synopsis):
 ?>
 <section id="synopsis" class="bg-[#EDEBE4]">
-  <div class="h-full py-[70px] md:py-[100px] md:py-[0] delimiter">
+  <div class="h-full py-[70px] md:py-[100px] md:py-[0]">
     <div class="flex h-full items-center single-image">
       <a class="w-full" href="<?= $synopsis['image_synopsis']['url']; ?>">
         <img class="m-auto md:h-screen object-contain" src="<?= $synopsis['image_synopsis']['url']; ?>" alt="" data-aos="fade-up" data-aos-duration="1500">
