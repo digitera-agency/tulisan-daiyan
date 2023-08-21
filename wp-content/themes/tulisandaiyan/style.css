@@ -144,3 +144,38 @@ body {
 #star {
     opacity: 0;
 }
+
+#bulan {
+    opacity: 0;
+    min-width: 600px;
+    height: auto;
+    position: absolute;
+    padding-right: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile-center {
+        min-width: 200px;
+        padding-left: 45px;
+    }
+    #typeOne {
+        font-size: 64px;
+    }
+    #typeTwo {
+        font-size: 14px;
+    }
+    .star {
+        min-width: 150px;
+        height: auto;
+        position: absolute;
+        top: -80px;
+        right: -80px;
+    }
+    #bulan {
+        opacity: 0;
+        min-width: 100%;
+        height: auto;
+        position: absolute;
+        padding-right: 0px;
+    }
+}
