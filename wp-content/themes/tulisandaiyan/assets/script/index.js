@@ -1,51 +1,22 @@
 AOS.init();
-const seconds = document.querySelector(".seconds .number"),
-  minutes = document.querySelector(".minutes .number"),
-  hours = document.querySelector(".hours .number"),
-  days = document.querySelector(".days .number");
-const dateLaunched = document.getElementById('dateLaunch');
-const dateLaunch = new Date(Number(dateLaunched.value));
-const dateNow = new Date();
-const differenceInMilliseconds = dateLaunch > dateNow ? dateLaunch - dateNow : 0;
-const calcseconds = Math.floor(differenceInMilliseconds / 1000) % 60;
-const calcminutes = Math.floor(differenceInMilliseconds / (1000 * 60)) % 60;
-const calchours = Math.floor(differenceInMilliseconds / (1000 * 60 * 60)) % 24;
-const calcdays = Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24));
-let secValue = calcseconds > 0 ? calcseconds : 0,
-    minValue = calcminutes > 0 ? calcminutes : 0,
-    hourValue = calchours > 0 ? calchours: 0,
-    dayValue = calcdays > 0 ? calcdays : 0;
 
 const timeFunction = setInterval(() => {
-  console.log("@Value", secValue, minValue, hourValue, dayValue)
-
-  if (secValue === 0) {
-    if(minValue === 0) {
-      secValue = 0
-    } else {
-      minValue--;
-      secValue = 59;
-    }
-  } else {
-    secValue--;
-  }
-  if (minValue === 0) {
-    if (hourValue === 0) {
-      minValue = 0;
-    } else {
-      hourValue--;
-      minValue = 59;
-    }
-  }
-  if (hourValue === 0) {
-    if (dayValue === 0) {
-      hourValue = 0;
-      dayValue = 0;
-    } else {
-      dayValue--;
-      hourValue = 23;
-    }
-  }
+  const seconds = document.querySelector(".seconds .number"),
+    minutes = document.querySelector(".minutes .number"),
+    hours = document.querySelector(".hours .number"),
+    days = document.querySelector(".days .number");
+  const dateLaunched = document.getElementById('dateLaunch');
+  const dateLaunch = new Date(Number(dateLaunched.value));
+  const dateNow = new Date();
+  const differenceInMilliseconds = dateLaunch > dateNow ? dateLaunch - dateNow : 0;
+  const calcseconds = Math.floor(differenceInMilliseconds / 1000) % 60;
+  const calcminutes = Math.floor(differenceInMilliseconds / (1000 * 60)) % 60;
+  const calchours = Math.floor(differenceInMilliseconds / (1000 * 60 * 60)) % 24;
+  const calcdays = Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24));
+  let secValue = calcseconds > 0 ? calcseconds : 0,
+    minValue = calcminutes > 0 ? calcminutes : 0,
+    hourValue = calchours > 0 ? calchours : 0,
+    dayValue = calcdays > 0 ? calcdays : 0;
 
   seconds.textContent = secValue < 10 ? `0${secValue}` : secValue;
   minutes.textContent = minValue < 10 ? `0${minValue}` : minValue;
@@ -55,21 +26,21 @@ const timeFunction = setInterval(() => {
 
 
 $('.lightSlider').lightSlider({
-    gallery: true,
-    controls: false,
-    item: 1,
-    loop: true,
-    slideMargin: 0,
-    thumbItem: 4
+  gallery: true,
+  controls: false,
+  item: 1,
+  loop: true,
+  slideMargin: 0,
+  thumbItem: 4
 });
 
 $('.lightSlider2').lightSlider({
-    gallery: true,
-    controls: false,
-    item: 1,
-    loop: true,
-    slideMargin: 0,
-    thumbItem: 4
+  gallery: true,
+  controls: false,
+  item: 1,
+  loop: true,
+  slideMargin: 0,
+  thumbItem: 4
 });
 
 const faqs = document.querySelectorAll('[data-list="faq"]');
@@ -77,33 +48,33 @@ if (faqs.length != 0) {
   faqs.forEach(function (faq, index) {
     // Check if a FAQ is changed
     faq.addEventListener('change', function (e) {
-        const input = e.target;
-        const item = e.target.parentNode;
-        const label = e.target.nextElementSibling;
-        const type = e.target.getAttribute('type');
-        // Check if type is checkbox
-        if (type == 'checkbox') {
-          // console.log(label);
-          if (input.checked) {
-              // console.log('checked');
-              label.setAttribute('aria-expanded', 'true');
-          } else {
-              // console.log('not checked');
-              label.setAttribute('aria-expanded', 'false');
-          }
+      const input = e.target;
+      const item = e.target.parentNode;
+      const label = e.target.nextElementSibling;
+      const type = e.target.getAttribute('type');
+      // Check if type is checkbox
+      if (type == 'checkbox') {
+        // console.log(label);
+        if (input.checked) {
+          // console.log('checked');
+          label.setAttribute('aria-expanded', 'true');
+        } else {
+          // console.log('not checked');
+          label.setAttribute('aria-expanded', 'false');
         }
-        if (type == 'radio') {
-            console.log(type);
-        }
+      }
+      if (type == 'radio') {
+        console.log(type);
+      }
     });
   });
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const collapseButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
   const navbarMenu = document.getElementById('navbar-sticky');
-  collapseButton.addEventListener('click', function() {
+  collapseButton.addEventListener('click', function () {
     navbarMenu.classList.toggle('hidden');
     navbarMenu.classList.toggle('md:flex');
   });
@@ -114,45 +85,22 @@ const output = document.getElementById('navbar');
 output.style.visibility = "hidden";
 document.addEventListener("scroll", event => {
   const scroll = window.scrollY;
-  if(scroll === 0) {
+  if (scroll === 0) {
     output.classList.remove("fade-in");
     output.style.visibility = "hidden";
   } else {
     output.style.visibility = "visible";
     output.classList.add("fade-in");
-    
+
   }
 }, { passive: true });
-  // 7 * 300
-  // 16 * 150
-
-// window.onload = function() {
-//   // Simulating a successful operation after 3 seconds
-//   setTimeout(function() {
-//     // Get the loading element
-//     const loadingElement = document.getElementById("loading");
-
-//     // Add the fade-out animation by changing the opacity to 0
-//     loadingElement.style.opacity = 0;
-
-//     // Wait for the animation to finish (0.5 seconds) before hiding the loading element
-//     setTimeout(function() {
-//       loadingElement.style.display = "none";
-
-      
-//       // Add your code to show the rest of the page or execute other actions after loading and fade-out here
-
-//     }, 500); // 500 milliseconds = 0.5 seconds
-
-//   }, 2000); // 3000 milliseconds = 3 seconds
-// };
 
 const typeOne = document.getElementById('typeOne');
 const typeTwo = document.getElementById('typeTwo');
 const star = document.getElementById('star');
 
 const typewriterOne = new Typewriter(typeOne, {
-  loop: true, 
+  loop: true,
   delay: 300,
   deleteSpeed: 300,
 });
@@ -182,30 +130,30 @@ typewriterTwo
   .pauseFor(5000)
   .start();
 
-$(document).ready(function() {
+$(document).ready(function () {
   var sections = $('.counter');
   var windowHeight = $(window).height();
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
 
-    sections.each(function() {
+    sections.each(function () {
       var section = $(this);
       var sectionTop = section.offset().top;
       var sectionHeight = section.height();
       var countElement = section.find('.count');
       var countTo = parseInt(countElement.attr('data-count'));
-      
+
       if (scrollTop >= sectionTop - windowHeight + sectionHeight && !countElement.hasClass('counted')) {
         $({ countNum: 0 }).animate({
           countNum: countTo
         }, {
           duration: 2000,
           easing: 'swing',
-          step: function() {
+          step: function () {
             countElement.text(Math.floor(this.countNum));
           },
-          complete: function() {
+          complete: function () {
             countElement.text(this.countNum);
             countElement.addClass('counted');
           }
@@ -216,13 +164,13 @@ $(document).ready(function() {
 });
 
 var elements = document.getElementsByClassName('single-image');
-        for (let item of elements) {
-            lightGallery(item, {
-            thumbnail: true,
-            showZoomInOutIcons: true,
-            actualSize: false,
-            plugins: [lgZoom],
-            share:false,
-            mobileSettings :  { controls: true, showCloseIcon: true, download: false}
-            })
-        }
+for (let item of elements) {
+  lightGallery(item, {
+    thumbnail: true,
+    showZoomInOutIcons: true,
+    actualSize: false,
+    plugins: [lgZoom],
+    share: false,
+    mobileSettings: { controls: true, showCloseIcon: true, download: false }
+  })
+}
