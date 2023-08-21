@@ -150,6 +150,7 @@ document.addEventListener("scroll", event => {
 const typeOne = document.getElementById('typeOne');
 const typeTwo = document.getElementById('typeTwo');
 const star = document.getElementById('star');
+const moon = document.getElementById('bulan');
 
 const typewriterOne = new Typewriter(typeOne, {
   loop: true, 
@@ -170,16 +171,25 @@ typewriterOne
     star.style.opacity = 1;
     star.style.transition = "all 1s"
   })
+  .pauseFor(300)
+  .callFunction(() => {
+    moon.style.opacity = 1;
+    moon.style.transition = "all 1s"
+  })
   .pauseFor(4800)
   .callFunction(() => {
     star.style.opacity = 0;
   })
+  .pauseFor(300)
+  .callFunction(() => {
+    moon.style.opacity = 0;
+  })
   .start();
 
 typewriterTwo
-  .pauseFor(670)
+  .pauseFor(970)
   .typeString('by daiyan trisha')
-  .pauseFor(5000)
+  .pauseFor(6000)
   .start();
 
 $(document).ready(function() {

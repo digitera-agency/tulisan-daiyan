@@ -23,12 +23,12 @@ $unixtimestamp = get_field('unixtimestamp');
 <section class="overflow-hidden">
   <div class="h-screen">
     <div class="flex h-full items-center justify-center">
-      <div class="block relative min-w-100">
+      <div class="block relative min-w-100 mobile-center">
         <h1 id="typeOne" class="w-full"></h1>
         <h2 id="typeTwo"></h2>
         <img id="star" class="star" src="<?php bloginfo('stylesheet_directory');?>/assets/img/star.png" alt="">
-        <img id="bulan" class="bulan" src="<?php bloginfo('stylesheet_directory');?>/assets/img/bulan.png" alt="">
       </div>
+      <img id="bulan" class="bulan" src="<?php bloginfo('stylesheet_directory');?>/assets/img/bulan.png" alt="">
     </div>
   </div>
 </section>
