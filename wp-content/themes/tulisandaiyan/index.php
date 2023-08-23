@@ -18,7 +18,10 @@ $faq = get_field('faq');
 $doc = get_field('doc');
 $dateLaunch = get_field('dateLaunch');
 $unixtimestamp = get_field('unixtimestamp');
+$preorderType = get_field('preorder_type');
 ?>
+<?php get_template_part( 'template-part/waitlist'); ?>
+
 <input type="hidden" id="dateLaunch" value="<?= $unixtimestamp ?>">
 <section class="overflow-hidden">
   <div class="h-screen">

@@ -179,3 +179,22 @@ body {
         padding-right: 0px;
     }
 }
+.wpforms-container.inline-fields .wpforms-submit-container {
+    padding: 15px 0px !important;
+    margin-top: 0px !important;
+}
+
+#wpforms-submit-34 {
+    height: 43px;
+    background-color: #8e2424;
+}
+
+#waitlist-backdrop, #waitlist-panel {
+    opacity: 0;
+    display: none;
+}
+
+.preorder-modal {
+    display: flex !important;
+    opacity: 1 !important;
+}
