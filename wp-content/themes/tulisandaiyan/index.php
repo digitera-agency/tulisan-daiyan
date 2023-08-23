@@ -20,8 +20,9 @@ $dateLaunch = get_field('dateLaunch');
 $unixtimestamp = get_field('unixtimestamp');
 $preorderType = get_field('preorder_type');
 ?>
-<?php get_template_part( 'template-part/waitlist'); ?>
 
+
+<?php if($unixtimestamp): ?>
 <input type="hidden" id="dateLaunch" value="<?= $unixtimestamp ?>">
 <section class="overflow-hidden">
   <div class="h-screen">
@@ -35,10 +36,9 @@ $preorderType = get_field('preorder_type');
     </div>
   </div>
 </section>
+<?php endif; ?>
 
-<?php
-  if($section_1):
-?>
+<?php if($section_1 && $section_1['image_1']): ?>
 <section>
   <div class="py-[70px] md:py-[100px]">
     <img class="m-auto" src="<?= $section_1['image_1']['url'] ?>" alt="" data-aos="fade-up" data-aos-duration="1500">
@@ -46,6 +46,8 @@ $preorderType = get_field('preorder_type');
   </div>
 </section>
 <?php endif; ?>
+
+<?php if($dateLaunch): ?>
 <section class="bg-[#282828]">
   <div>
     <div class="text-center py-[70px] md:py-[100px]">
@@ -74,16 +76,18 @@ $preorderType = get_field('preorder_type');
     </div>
   </div>
 </section>
+<?php endif; ?>
 
+<?php if($doc): ?>
 <section id="preview">
   <div class="lg:py-[100px] py-[30px]">
     <?php echo do_shortcode($doc)?>
     <p class="text-center pt-[15px] block md:hidden">click to preview the book</p>
   </div>
 </section>
-<?php
-if($synopsis):
-?>
+<?php endif; ?>
+
+<?php if($synopsis && $synopsis['image_synopsis']): ?>
 <section id="synopsis" class="bg-[#EDEBE4]">
   <div class="h-full py-[70px] md:py-[100px] md:py-[0]">
     <div class="flex h-full items-center single-image">
@@ -94,7 +98,7 @@ if($synopsis):
   </div>
 </section>
 <?php endif; ?>
-<?php if($spesification):?>
+<?php if($spesification && $spesification['image_specification']):?>
 <section class="py-[50px]">
   <div class="h-full delimiter">
     <h2 class="font-medium text-[32px] md:text-[48px] font-butler text-center" data-aos="fade-up" data-aos-duration="1500">Book Specification</h2>
@@ -274,6 +278,12 @@ if($synopsis):
   </div>
 </section>
 
+<?php if($preorderType == 1): ?>
+<section id="waitlist">
+  <?php get_template_part('template-part/waitlist'); ?>
+</section>
+<?php endif; ?>
+
 <section id="preorder" class="delimiter py-[70px] md:py-[100px]">
   <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Where To Pre Order?</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 md:">
@@ -290,7 +300,7 @@ if($synopsis):
   </div>
 </section>
 
-<?php if($meet_author['url']):?>
+<?php if($meet_author && $meet_author['url']):?>
 <section>
   <div class="h-full pt-[50px] md:pt-0">
     <div class="flex h-full items-center single-image">
@@ -299,8 +309,9 @@ if($synopsis):
   </div>
 </section>
 <?php endif;?>
-<div id="faq" class="pt-[70px] md:pt-[100px]"></div>
+
 <?php if($faq):?>
+<div id="faq" class="pt-[70px] md:pt-[100px]"></div>
 <section class="pb-[70px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">
   <div itemscope itemtype="https://schema.org/FAQPage">
     <div class="delimiter mx-auto">
