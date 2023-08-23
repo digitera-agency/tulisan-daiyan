@@ -18,6 +18,7 @@
     
 ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php wp_head();?>
 <link rel="icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/assets/img/n-logo.png">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
@@ -25,7 +26,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lightgallery-bundle.min.css" integrity="sha512-lgRFGedXdci5Ykc5Wbgd8QCzt3lBmnkWcMRAS8myln2eMCDwQBrHmjqvUj9rBcKOyWMC+EYJnvEppggw1v+m8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="<?php bloginfo('stylesheet_directory') ;?>/style.css" rel="stylesheet" type="text/css">
-<?php wp_head();?>
 </head>
 
 <body class="bg-[#FBF6F0]">
@@ -36,7 +36,7 @@
       <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo.png" class="h-8 mr-3" alt="Logo">
   </a>
   <div class="flex lg:order-2">
-      <a href="#preorder" class="text-sm font-semibold text-white bg-[#8E2424] rounded-full px-6 me-3 py-2.5 tracking-widest">Pre-order now</a>
+      <a href="#preorder" class="text-sm font-semibold text-white bg-[#8E2424] rounded-full px-6 me-3 py-2.5 tracking-widest preorder-collapse">Pre-order now</a>
       <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">

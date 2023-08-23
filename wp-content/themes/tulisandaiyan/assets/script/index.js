@@ -73,11 +73,22 @@ if (faqs.length != 0) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const collapseButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+  // const preorder = document.querySelector('.preorder-collapse');
+  // const waitlistBackdrop = document.getElementById('waitlist-backdrop');
+  // const waitlistModal = document.getElementById('waitlist-panel');
   const navbarMenu = document.getElementById('navbar-sticky');
   collapseButton.addEventListener('click', function () {
     navbarMenu.classList.toggle('hidden');
     navbarMenu.classList.toggle('md:flex');
   });
+  // preorder.addEventListener('click', function () {
+  //   waitlistBackdrop.classList.toggle('preorder-modal');
+  //   waitlistModal.classList.toggle('preorder-modal');
+  // });
+  // waitlistBackdrop.addEventListener('click', function () {
+  //   waitlistBackdrop.classList.toggle('preorder-modal');
+  //   waitlistModal.classList.toggle('preorder-modal');
+  // });
 });
 
 const output = document.getElementById('navbar');
