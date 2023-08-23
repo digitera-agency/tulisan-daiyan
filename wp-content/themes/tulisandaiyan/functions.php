@@ -78,3 +78,5 @@ function webp_is_displayable($result, $path) {
 }
 
 add_filter('file_is_displayable_image', 'webp_is_displayable', 10, 2);
+
+include_once( get_stylesheet_directory() . '/template-part/wp-form-template.php' );
