@@ -158,11 +158,6 @@ body {
     margin-top: 0px !important;
 }
 
-#wpforms-submit-34 {
-    height: 50px;
-    background-color: #8e2424;
-}
-
 #waitlist-backdrop, #waitlist-panel {
     opacity: 0;
     display: none;
@@ -204,6 +199,7 @@ body {
 }
 
 .wpforms-submit {
+    height: auto !important;
     -webkit-appearance: none !important;
     appearance: none !important;
     outline: none;
