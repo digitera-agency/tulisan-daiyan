@@ -1,4 +1,4 @@
-<div id="contactForm" class="bg-[#282828] py-16 sm:py-24">
+<div id="contactForm" class="bg-[#282828] py-16 sm:py-24 px-4">
   <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div class="relative isolate">
       <h2 class="mx-auto max-w-2xl text-center font-bold tracking-tight text-white font-butler text-[32px] md:text-[48px] font-medium ">Join The Waitlist for <br> Tulisan Today!...</h2>
