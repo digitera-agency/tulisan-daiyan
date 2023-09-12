@@ -161,7 +161,8 @@ $preorderType = get_field('preorder_type');
           </div>
         </div>
       </section>
-    <?php else if($list['left_or_right'] == "right"): ?>
+    <?php endif; ?>
+    <?php if($list['left_or_right'] == "right"): ?>
       <section class="delimiter py-[70px] md:py-[100px]">
         <div class="grid grid-cols-1 md:grid-cols-2 md:order-first">
           <?php if($list['single_image']){ ?>
