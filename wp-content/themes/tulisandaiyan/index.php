@@ -51,7 +51,7 @@ $preorderType = get_field('preorder_type');
 <section class="bg-[#282828]">
   <div>
     <div class="text-center py-[70px] md:py-[100px]">
-      <h2 class="text-[32px] md:text-[48px] font-light text-white font-butler" data-aos="fade-up" data-aos-duration="1500">Ready To Launch In...</h2>
+      <h2 class="text-[32px] md:text-[48px] font-light text-white font-butler" data-aos="fade-up" data-aos-duration="1500">Tulisan Soft Cover Edition</h2>
       <div class="flex gap-[10px] md:gap-[30px] items-top justify-center pt-[25px] md:pt-[50px]" data-aos="fade-up" data-aos-duration="1500">
         <div class="days">
           <span class="capitalize w-fit mx-auto relative right-[10px] pb-[15px] md:pb-[30px] block text-white font-medium text-[14px]">days</span>
@@ -101,7 +101,7 @@ $preorderType = get_field('preorder_type');
 <?php if($spesification && $spesification['image_specification']):?>
 <section class="py-[50px]">
   <div class="h-full delimiter">
-    <h2 class="font-medium text-[32px] md:text-[48px] font-butler text-center" data-aos="fade-up" data-aos-duration="1500">Book Specification</h2>
+    <h2 class="font-medium text-[32px] md:text-[48px] font-butler text-center" data-aos="fade-up" data-aos-duration="1500">Soft Cover Specification</h2>
     <div class="flex h-full py-2 items-center single-image">
       <a class="w-full" href="<?= $spesification['image_specification']['url'] ?>">
         <img class="m-auto md:h-screen object-contain" src="<?= $spesification['image_specification']['url'] ?>" alt="" data-aos="fade-up" data-aos-duration="1500">
@@ -114,90 +114,101 @@ $preorderType = get_field('preorder_type');
 <?php if($pakcgae):
   $count=0;
   foreach ($pakcgae as $list) :
-    if ($count++ % 2 == 0) {?>
-        <section id="package" class="bg-[#EDEBE4]">
-  <div class="delimiter py-[70px] md:py-[100px]">
-    <div class="grid grid-cols-1 md:grid-cols-2">
-      <div data-aos="fade-up" data-aos-duration="1500">
-        <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?></h2>
-        <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
-        </svg>
-        <div class="cus-ul ps-4 text-[#555] py-[50px]">
-          <?= $list['deskripsi_package']?>
-        </div>
-        <div class="pb-[30px] counter">
-          <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="<?= $list['copies_number']?>"> 0 </span> copies</b>
-        </div>
-        <div>
-          <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent"><?= $list['price']?></h3>
-        </div>
-        <div class="mt-5">
-          <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
-        </div>
-      </div>
-      <?php if($list['single_image']){ ?>
-        <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
-          <a href="<?= $list['single_image']['url'] ?>">
-            <img src="<?= $list['single_image']['url'] ?>" alt="">
-          </a>
-        </div>
-        <?php }else{ ?>
-          <div class="demo pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
-            <div id="lightSlider" class="single-image lightSlider">
-            <?php foreach( $list['image_package'] as $image ): ?>
-              <a href="<?= $image['url'] ?>" data-thumb="<?= $image['url'] ?>">
-              <img class="w-full h-full" src="<?= $image['url'] ?>" />
-              </a>
-          <?php endforeach; ?>
-           </div>
+    if ($list['left_or_right'] == "left") {?>
+      <section id="package" class="bg-[#EDEBE4]">
+        <div class="delimiter py-[70px] md:py-[100px]">
+          <div class="grid grid-cols-1 md:grid-cols-2">
+            <div data-aos="fade-up" data-aos-duration="1500">
+              <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?></h2>
+              <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
+              </svg>
+              <div class="cus-ul ps-4 text-[#555] py-[50px]">
+                <?= $list['deskripsi_package']?>
+              </div>
+              <div class="pb-[30px] counter">
+                <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="<?= $list['copies_number']?>"> 0 </span> copies</b>
+              </div>
+              <div>
+                <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent"><?= $list['price']?></h3>
+              </div>
+              <div class="mt-5">
+                <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">
+                  <?php if($list['sold_out'] == 1): ?>
+                    SOLD OUT
+                  <?php else: ?>
+                    Pre-order now
+                  <?php endif; ?>
+                </a>
+              </div>
+            </div>
+            <?php if($list['single_image']){ ?>
+              <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
+                <a href="<?= $list['single_image']['url'] ?>">
+                  <img src="<?= $list['single_image']['url'] ?>" alt="">
+                </a>
+              </div>
+              <?php }else{ ?>
+                <div class="demo pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
+                  <div id="lightSlider" class="single-image lightSlider">
+                  <?php foreach( $list['image_package'] as $image ): ?>
+                    <a href="<?= $image['url'] ?>" data-thumb="<?= $image['url'] ?>">
+                    <img class="w-full h-full" src="<?= $image['url'] ?>" />
+                    </a>
+                <?php endforeach; ?>
+                </div>
+                </div>
+              <?php } ?>
           </div>
-        <?php } ?>
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
     <?php } else { ?>
       <section class="delimiter py-[70px] md:py-[100px]">
-  <div class="grid grid-cols-1 md:grid-cols-2 md:order-first">
-    <?php if($list['single_image']){ ?>
-    <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
-      <a href="<?= $list['single_image']['url'] ?>">
-        <img src="<?= $list['single_image']['url'] ?>" alt="">
-      </a>
-    </div>
-    <?php }else{ ?>
-      <div class="demo pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
-        <div id="lightSlider" class="single-image lightSlider">
-        <?php foreach( $list['image_package'] as $image ): ?>
-          <a href="<?= $image['url'] ?>" data-thumb="<?= $image['url'] ?>">
-          <img class="w-full h-full" src="<?= $image['url'] ?>" />
-          </a>
-      <?php endforeach; ?>
+        <div class="grid grid-cols-1 md:grid-cols-2 md:order-first">
+          <?php if($list['single_image']){ ?>
+          <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
+            <a href="<?= $list['single_image']['url'] ?>">
+              <img src="<?= $list['single_image']['url'] ?>" alt="">
+            </a>
+          </div>
+          <?php }else{ ?>
+            <div class="demo pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
+              <div id="lightSlider" class="single-image lightSlider">
+              <?php foreach( $list['image_package'] as $image ): ?>
+                <a href="<?= $image['url'] ?>" data-thumb="<?= $image['url'] ?>">
+                <img class="w-full h-full" src="<?= $image['url'] ?>" />
+                </a>
+            <?php endforeach; ?>
+              </div>
+            </div>
+          <?php } ?>
+          <div class="md:px-[100px] order-first md:order-last" data-aos="fade-up" data-aos-duration="1500">
+            <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?></h2>
+            <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
+            </svg>
+            <div class="cus-ul ps-4 text-[#555] py-[50px]">
+                <?= $list['deskripsi_package']?>
+              </div>
+            <div class="pb-[30px] counter">
+              <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="<?= $list['copies_number']?>"> 0 </span> copies</b>
+            </div>
+            <div>
+              <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent"><?= $list['price']?></h3>
+            </div>
+            <div class="mt-5">
+              <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">
+                <?php if($list['sold_out'] == 1): ?>
+                  SOLD OUT
+                <?php else: ?>
+                  Pre-order now
+                <?php endif; ?>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     <?php } ?>
-    <div class="md:px-[100px] order-first md:order-last" data-aos="fade-up" data-aos-duration="1500">
-      <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?></h2>
-      <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
-      </svg>
-      <div class="cus-ul ps-4 text-[#555] py-[50px]">
-          <?= $list['deskripsi_package']?>
-        </div>
-      <div class="pb-[30px] counter">
-        <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="<?= $list['copies_number']?>"> 0 </span> copies</b>
-      </div>
-      <div>
-        <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent"><?= $list['price']?></h3>
-      </div>
-      <div class="mt-5">
-        <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">Pre-order now</a>
-      </div>
-    </div>
-  </div>
-</section>
-    <?php } ?>
-
 <?php endforeach; endif;?>
 <section id="timeline" class="bg-[#F3F2EC] py-[70px] md:py-[100px]">
   <div class="delimiter">
@@ -213,7 +224,7 @@ $preorderType = get_field('preorder_type');
                 </svg> 
             </div>
             <div class="w-full max-w-[20rem] text-left">
-                <p class="font-butler text-[18px] md:text-[24px] font-[500]">26 Aug 10 AM</p>
+                <p class="font-butler text-[18px] md:text-[24px] font-[500]">22 Sept 10 AM</p>
             </div>
         </div>
         <div class="my-4 h-[80px] md:h-auto relative overflow-hidden">
@@ -221,24 +232,24 @@ $preorderType = get_field('preorder_type');
             <path d="M10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2H10.5ZM13.0607 183.061C12.4749 183.646 11.5251 183.646 10.9393 183.061L1.3934 173.515C0.807611 172.929 0.807611 171.979 1.3934 171.393C1.97919 170.808 2.92893 170.808 3.51472 171.393L12 179.879L20.4853 171.393C21.0711 170.808 22.0208 170.808 22.6066 171.393C23.1924 171.979 23.1924 172.929 22.6066 173.515L13.0607 183.061ZM13.5 2L13.5 86.375H10.5L10.5 2H13.5ZM13.5 86.375L13.5 182H10.5L10.5 86.375H13.5Z" fill="#282828"/>
           </svg>
         </div>
-        <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
-            <div class="w-full max-w-[20rem] text-right">
-                <p class="font-butler text-[18px] md:text-[24px] font-[500]">Book Signing Period</p>
-            </div>
-            <div class="min-h-[40px] md:min-h-[80px] min-w-[40px] md:min-w-[80px] rounded-full inline-flex items-center justify-center mx-5 md:mx-10 bg-black">
-              <svg class="h-[25px] md:h-[50px] w-[25px] md:w-[50px]" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.25 43.75L4.22002 43.2814C4.0585 43.9814 4.26894 44.7152 4.77685 45.2231C5.28479 45.731 6.01854 45.9414 6.71846 45.78L6.25 43.75ZM19.0551 33.8908C19.8687 33.0773 19.8687 31.7581 19.0551 30.9446C18.2415 30.131 16.9224 30.131 16.1088 30.9446L19.0551 33.8908ZM20.8333 30.2083C20.8333 30.7835 20.367 31.25 19.7917 31.25V35.4166C22.6681 35.4166 25 33.0848 25 30.2083H20.8333ZM19.7917 31.25C19.2164 31.25 18.75 30.7835 18.75 30.2083H14.5833C14.5833 33.0848 16.9152 35.4166 19.7917 35.4166V31.25ZM18.75 30.2083C18.75 29.6329 19.2164 29.1666 19.7917 29.1666V25C16.9152 25 14.5833 27.3319 14.5833 30.2083H18.75ZM19.7917 29.1666C20.367 29.1666 20.8333 29.6329 20.8333 30.2083H25C25 27.3319 22.6681 25 19.7917 25V29.1666ZM29.5031 7.1338L25.6102 11.0268L28.5565 13.9731L32.4494 10.0801L29.5031 7.1338ZM26.511 10.4968L15.7081 13.5833L16.8527 17.5897L27.6556 14.5031L26.511 10.4968ZM9.58594 20.0291L4.22002 43.2814L8.27998 44.2183L13.6459 20.966L9.58594 20.0291ZM6.71846 45.78L29.9708 40.4139L29.034 36.3539L5.78154 41.72L6.71846 45.78ZM36.4167 34.2919L39.5031 23.4889L35.4969 22.3441L32.4102 33.1473L36.4167 34.2919ZM38.9731 24.3898L42.866 20.4968L39.9198 17.5505L36.0269 21.4435L38.9731 24.3898ZM42.866 12.8364L37.1635 7.1338L34.2173 10.0801L39.9198 15.7827L42.866 12.8364ZM42.866 20.4968C43.2544 20.1085 43.6352 19.7299 43.9287 19.3843C44.2379 19.02 44.5704 18.5577 44.7665 17.9542L40.8037 16.6666C40.8452 16.5387 40.8942 16.5205 40.7523 16.6877C40.5946 16.8735 40.3567 17.1137 39.9198 17.5505L42.866 20.4968ZM39.9198 15.7827C40.3567 16.2195 40.5946 16.4597 40.7523 16.6455C40.8942 16.8126 40.8452 16.7945 40.8037 16.6666L44.7665 15.379C44.5704 14.7754 44.2379 14.3132 43.9287 13.9489C43.6352 13.6033 43.2544 13.2246 42.866 12.8364L39.9198 15.7827ZM44.7665 17.9542C45.0383 17.1173 45.0383 16.2159 44.7665 15.379L40.8037 16.6666L44.7665 17.9542ZM29.9708 40.4139C31.225 40.1246 32.321 39.8973 33.2502 39.3321L31.0848 35.7725C30.866 35.9054 30.5681 36 29.034 36.3539L29.9708 40.4139ZM32.4102 33.1473C31.9777 34.661 31.8679 34.9537 31.7237 35.1654L35.1675 37.5112C35.7798 36.6125 36.0631 35.5294 36.4167 34.2919L32.4102 33.1473ZM33.2502 39.3321C34.0119 38.8689 34.6656 38.2479 35.1675 37.5112L31.7237 35.1654C31.5565 35.411 31.3387 35.6179 31.0848 35.7725L33.2502 39.3321ZM15.7081 13.5833C14.4705 13.9369 13.3875 14.2202 12.4887 14.8325L14.8345 18.2761C15.0461 18.1319 15.3388 18.0222 16.8527 17.5897L15.7081 13.5833ZM13.6459 20.966C14 19.4318 14.0945 19.1339 14.2275 18.9151L10.6678 16.7497C10.1025 17.6789 9.87535 18.775 9.58594 20.0291L13.6459 20.966ZM12.4887 14.8325C11.7519 15.3344 11.1311 15.9881 10.6678 16.7497L14.2275 18.9151C14.382 18.6613 14.5889 18.4434 14.8345 18.2761L12.4887 14.8325ZM32.4494 10.0801C32.8862 9.64328 33.1265 9.40538 33.3123 9.24767C33.4794 9.10573 33.4612 9.15465 33.3333 9.19619L32.0458 5.23346C31.4421 5.42959 30.98 5.76203 30.6156 6.07125C30.27 6.36469 29.8915 6.74561 29.5031 7.1338L32.4494 10.0801ZM37.1635 7.1338C36.7752 6.74559 36.3967 6.36469 36.051 6.07125C35.6867 5.76203 35.2246 5.42959 34.6208 5.23346L33.3333 9.19619C33.2054 9.15465 33.1873 9.10575 33.3544 9.24767C33.5402 9.40538 33.7804 9.64325 34.2173 10.0801L37.1635 7.1338ZM33.3333 9.19619L34.6208 5.23346C33.784 4.96157 32.8827 4.96157 32.0458 5.23346L33.3333 9.19619ZM25.6102 13.9731L36.0269 24.3898L38.9731 21.4435L28.5565 11.0268L25.6102 13.9731ZM16.1088 30.9446L4.77685 42.2769L7.72314 45.2231L19.0551 33.8908L16.1088 30.9446Z" fill="white"/>
-              </svg>
-            </div>
-            <div class="w-full max-w-[20rem] text-left">
-                <p class="font-butler text-[18px] md:text-[24px] font-[500]">9 - 12 Sept</p>
-            </div>
+        <!-- <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
+          <div class="w-full max-w-[20rem] text-right">
+              <p class="font-butler text-[18px] md:text-[24px] font-[500]">Book Signing Period</p>
+          </div>
+          <div class="min-h-[40px] md:min-h-[80px] min-w-[40px] md:min-w-[80px] rounded-full inline-flex items-center justify-center mx-5 md:mx-10 bg-black">
+            <svg class="h-[25px] md:h-[50px] w-[25px] md:w-[50px]" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.25 43.75L4.22002 43.2814C4.0585 43.9814 4.26894 44.7152 4.77685 45.2231C5.28479 45.731 6.01854 45.9414 6.71846 45.78L6.25 43.75ZM19.0551 33.8908C19.8687 33.0773 19.8687 31.7581 19.0551 30.9446C18.2415 30.131 16.9224 30.131 16.1088 30.9446L19.0551 33.8908ZM20.8333 30.2083C20.8333 30.7835 20.367 31.25 19.7917 31.25V35.4166C22.6681 35.4166 25 33.0848 25 30.2083H20.8333ZM19.7917 31.25C19.2164 31.25 18.75 30.7835 18.75 30.2083H14.5833C14.5833 33.0848 16.9152 35.4166 19.7917 35.4166V31.25ZM18.75 30.2083C18.75 29.6329 19.2164 29.1666 19.7917 29.1666V25C16.9152 25 14.5833 27.3319 14.5833 30.2083H18.75ZM19.7917 29.1666C20.367 29.1666 20.8333 29.6329 20.8333 30.2083H25C25 27.3319 22.6681 25 19.7917 25V29.1666ZM29.5031 7.1338L25.6102 11.0268L28.5565 13.9731L32.4494 10.0801L29.5031 7.1338ZM26.511 10.4968L15.7081 13.5833L16.8527 17.5897L27.6556 14.5031L26.511 10.4968ZM9.58594 20.0291L4.22002 43.2814L8.27998 44.2183L13.6459 20.966L9.58594 20.0291ZM6.71846 45.78L29.9708 40.4139L29.034 36.3539L5.78154 41.72L6.71846 45.78ZM36.4167 34.2919L39.5031 23.4889L35.4969 22.3441L32.4102 33.1473L36.4167 34.2919ZM38.9731 24.3898L42.866 20.4968L39.9198 17.5505L36.0269 21.4435L38.9731 24.3898ZM42.866 12.8364L37.1635 7.1338L34.2173 10.0801L39.9198 15.7827L42.866 12.8364ZM42.866 20.4968C43.2544 20.1085 43.6352 19.7299 43.9287 19.3843C44.2379 19.02 44.5704 18.5577 44.7665 17.9542L40.8037 16.6666C40.8452 16.5387 40.8942 16.5205 40.7523 16.6877C40.5946 16.8735 40.3567 17.1137 39.9198 17.5505L42.866 20.4968ZM39.9198 15.7827C40.3567 16.2195 40.5946 16.4597 40.7523 16.6455C40.8942 16.8126 40.8452 16.7945 40.8037 16.6666L44.7665 15.379C44.5704 14.7754 44.2379 14.3132 43.9287 13.9489C43.6352 13.6033 43.2544 13.2246 42.866 12.8364L39.9198 15.7827ZM44.7665 17.9542C45.0383 17.1173 45.0383 16.2159 44.7665 15.379L40.8037 16.6666L44.7665 17.9542ZM29.9708 40.4139C31.225 40.1246 32.321 39.8973 33.2502 39.3321L31.0848 35.7725C30.866 35.9054 30.5681 36 29.034 36.3539L29.9708 40.4139ZM32.4102 33.1473C31.9777 34.661 31.8679 34.9537 31.7237 35.1654L35.1675 37.5112C35.7798 36.6125 36.0631 35.5294 36.4167 34.2919L32.4102 33.1473ZM33.2502 39.3321C34.0119 38.8689 34.6656 38.2479 35.1675 37.5112L31.7237 35.1654C31.5565 35.411 31.3387 35.6179 31.0848 35.7725L33.2502 39.3321ZM15.7081 13.5833C14.4705 13.9369 13.3875 14.2202 12.4887 14.8325L14.8345 18.2761C15.0461 18.1319 15.3388 18.0222 16.8527 17.5897L15.7081 13.5833ZM13.6459 20.966C14 19.4318 14.0945 19.1339 14.2275 18.9151L10.6678 16.7497C10.1025 17.6789 9.87535 18.775 9.58594 20.0291L13.6459 20.966ZM12.4887 14.8325C11.7519 15.3344 11.1311 15.9881 10.6678 16.7497L14.2275 18.9151C14.382 18.6613 14.5889 18.4434 14.8345 18.2761L12.4887 14.8325ZM32.4494 10.0801C32.8862 9.64328 33.1265 9.40538 33.3123 9.24767C33.4794 9.10573 33.4612 9.15465 33.3333 9.19619L32.0458 5.23346C31.4421 5.42959 30.98 5.76203 30.6156 6.07125C30.27 6.36469 29.8915 6.74561 29.5031 7.1338L32.4494 10.0801ZM37.1635 7.1338C36.7752 6.74559 36.3967 6.36469 36.051 6.07125C35.6867 5.76203 35.2246 5.42959 34.6208 5.23346L33.3333 9.19619C33.2054 9.15465 33.1873 9.10575 33.3544 9.24767C33.5402 9.40538 33.7804 9.64325 34.2173 10.0801L37.1635 7.1338ZM33.3333 9.19619L34.6208 5.23346C33.784 4.96157 32.8827 4.96157 32.0458 5.23346L33.3333 9.19619ZM25.6102 13.9731L36.0269 24.3898L38.9731 21.4435L28.5565 11.0268L25.6102 13.9731ZM16.1088 30.9446L4.77685 42.2769L7.72314 45.2231L19.0551 33.8908L16.1088 30.9446Z" fill="white"/>
+            </svg>
+          </div>
+          <div class="w-full max-w-[20rem] text-left">
+              <p class="font-butler text-[18px] md:text-[24px] font-[500]">9 - 12 Sept</p>
+          </div>
         </div>
         <div class="my-4 h-[80px] md:h-auto relative overflow-hidden">
           <svg class="absolute left-[50%] md:left-[0px] translate-x-[-50%] md:translate-x-0 bottom-0 md:bottom-auto md:relative mx-auto" width="24" height="184" viewBox="0 0 24 184" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2H10.5ZM13.0607 183.061C12.4749 183.646 11.5251 183.646 10.9393 183.061L1.3934 173.515C0.807611 172.929 0.807611 171.979 1.3934 171.393C1.97919 170.808 2.92893 170.808 3.51472 171.393L12 179.879L20.4853 171.393C21.0711 170.808 22.0208 170.808 22.6066 171.393C23.1924 171.979 23.1924 172.929 22.6066 173.515L13.0607 183.061ZM13.5 2L13.5 86.375H10.5L10.5 2H13.5ZM13.5 86.375L13.5 182H10.5L10.5 86.375H13.5Z" fill="#282828"/>
           </svg>
-        </div>
+        </div> -->
         <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
             <div class="w-full max-w-[20rem] text-right">
                 <p class="font-butler text-[18px] md:text-[24px] font-[500]">Fulfilment Period</p>
@@ -250,7 +261,7 @@ $preorderType = get_field('preorder_type');
               </svg>
             </div>
             <div class="w-full max-w-[20rem] text-left">
-                <p class="font-butler text-[18px] md:text-[24px] font-[500]">13 - 20 Sept</p>
+                <p class="font-butler text-[18px] md:text-[24px] font-[500]">2-6 Oct</p>
             </div>
         </div>
         <div class="my-4 h-[80px] md:h-auto relative overflow-hidden">
@@ -271,7 +282,7 @@ $preorderType = get_field('preorder_type');
             </svg>
             </div>
             <div class="w-full max-w-[20rem] text-left">
-                <p class="font-butler text-[18px] md:text-[24px] font-[500]">18 Sept onwards</p>
+                <p class="font-butler text-[18px] md:text-[24px] font-[500]">9 Oct onwards</p>
             </div>
         </div>
     </div>
