@@ -112,9 +112,8 @@ $preorderType = get_field('preorder_type');
 <?php endif; ?>
 
 <?php if($pakcgae):
-  $count=0;
-  foreach ($pakcgae as $list) :
-    if ($list['left_or_right'] == "left") {?>
+  foreach ($pakcgae as $list) : ?>
+    <?php if($list['left_or_right'] == "left"): ?>
       <section id="package" class="bg-[#EDEBE4]">
         <div class="delimiter py-[70px] md:py-[100px]">
           <div class="grid grid-cols-1 md:grid-cols-2">
@@ -162,7 +161,7 @@ $preorderType = get_field('preorder_type');
           </div>
         </div>
       </section>
-    <?php } else { ?>
+    <?php else if($list['left_or_right'] == "right"): ?>
       <section class="delimiter py-[70px] md:py-[100px]">
         <div class="grid grid-cols-1 md:grid-cols-2 md:order-first">
           <?php if($list['single_image']){ ?>
@@ -208,7 +207,7 @@ $preorderType = get_field('preorder_type');
           </div>
         </div>
       </section>
-    <?php } ?>
+    <?php endif; ?>
 <?php endforeach; endif;?>
 <section id="timeline" class="bg-[#F3F2EC] py-[70px] md:py-[100px]">
   <div class="delimiter">
