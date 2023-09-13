@@ -114,12 +114,12 @@ $preorderType = get_field('preorder_type');
 <?php if($pakcgae):
   $count=0;
   foreach ($pakcgae as $list) :
-    if ($count++ % 2 == 0) {?>
+    if ($list['left_or_right'] == "left") {?>
       <section id="package" class="bg-[#EDEBE4]">
         <div class="delimiter py-[70px] md:py-[100px]">
           <div class="grid grid-cols-1 md:grid-cols-2">
             <div data-aos="fade-up" data-aos-duration="1500">
-              <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?></h2>
+              <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?><?= $list['left_or_right']?></h2>
               <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
               </svg>
