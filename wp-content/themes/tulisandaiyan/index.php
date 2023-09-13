@@ -212,7 +212,7 @@ $preorderType = get_field('preorder_type');
 <?php endforeach; endif;?>
 <section id="timeline" class="bg-[#F3F2EC] py-[70px] md:py-[100px]">
   <div class="delimiter">
-    <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Pre Order Timeline</h2>
+    <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Soft Cover Pre Order Timeline</h2>
     <div class="max-w-screen-lg w-full mx-auto">
         <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
             <div class="w-full max-w-[20rem] text-right">
