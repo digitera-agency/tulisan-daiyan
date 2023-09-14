@@ -269,7 +269,7 @@ $preorderType = get_field('preorder_type');
               </svg>
             </div>
             <div class="w-full max-w-[20rem] text-left">
-                <p class="font-butler text-[18px] md:text-[24px] font-[500]">2-6 Oct</p>
+                <p class="font-butler text-[18px] md:text-[24px] font-[500]">9-18 Oct</p>
             </div>
         </div>
         <div class="my-4 h-[80px] md:h-auto relative overflow-hidden">
@@ -290,7 +290,7 @@ $preorderType = get_field('preorder_type');
             </svg>
             </div>
             <div class="w-full max-w-[20rem] text-left">
-                <p class="font-butler text-[18px] md:text-[24px] font-[500]">9 Oct onwards</p>
+                <p class="font-butler text-[18px] md:text-[24px] font-[500]">16 Oct onwards</p>
             </div>
         </div>
     </div>
