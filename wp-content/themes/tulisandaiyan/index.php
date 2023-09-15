@@ -78,6 +78,12 @@ $preorderType = get_field('preorder_type');
 </section>
 <?php endif; ?>
 
+<?php if($preorderType == 1): ?>
+<section id="waitlist">
+  <?php get_template_part('template-part/waitlist'); ?>
+</section>
+<?php endif; ?>
+
 <?php if($doc): ?>
 <section id="preview">
   <div class="lg:py-[100px] py-[30px]">
@@ -114,18 +120,83 @@ $preorderType = get_field('preorder_type');
 <?php if($pakcgae):
   $count=0;
   foreach ($pakcgae as $list) :
-    if ($list['left_or_right'] == "left") {?>
-      <section id="package" class="bg-[#EDEBE4]">
-        <div class="delimiter py-[70px] md:py-[100px]">
-          <div class="grid grid-cols-1 md:grid-cols-2">
-            <div data-aos="fade-up" data-aos-duration="1500">
+    if($list['active'] == 1) {
+      if ($list['left_or_right'] == "left") {?>
+        <section id="package" class="bg-[#EDEBE4]">
+          <div class="delimiter py-[70px] md:py-[100px]">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div data-aos="fade-up" data-aos-duration="1500">
+                <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?></h2>
+                <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
+                </svg>
+                <div class="cus-ul ps-4 text-[#555] py-[50px]">
+                  <?= $list['deskripsi_package']?>
+                </div>
+                <div class="pb-[30px] counter">
+                  <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="<?= $list['copies_number']?>"> 0 </span> copies</b>
+                </div>
+                <div>
+                  <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent"><?= $list['price']?></h3>
+                </div>
+                <div class="mt-5">
+                  <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">
+                    <?php if($list['sold_out'] == 1): ?>
+                      SOLD OUT
+                    <?php else: ?>
+                      Pre-order now
+                    <?php endif; ?>
+                  </a>
+                </div>
+              </div>
+              <?php if($list['single_image']){ ?>
+                <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
+                  <a href="<?= $list['single_image']['url'] ?>">
+                    <img src="<?= $list['single_image']['url'] ?>" alt="">
+                  </a>
+                </div>
+                <?php }else{ ?>
+                  <div class="demo pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
+                    <div id="lightSlider" class="single-image lightSlider">
+                    <?php foreach( $list['image_package'] as $image ): ?>
+                      <a href="<?= $image['url'] ?>" data-thumb="<?= $image['url'] ?>">
+                      <img class="w-full h-full" src="<?= $image['url'] ?>" />
+                      </a>
+                  <?php endforeach; ?>
+                  </div>
+                  </div>
+                <?php } ?>
+            </div>
+          </div>
+        </section>
+      <?php } else { ?>
+        <section class="delimiter py-[70px] md:py-[100px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 md:order-first">
+            <?php if($list['single_image']){ ?>
+            <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
+              <a href="<?= $list['single_image']['url'] ?>">
+                <img src="<?= $list['single_image']['url'] ?>" alt="">
+              </a>
+            </div>
+            <?php }else{ ?>
+              <div class="demo pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
+                <div id="lightSlider" class="single-image lightSlider">
+                <?php foreach( $list['image_package'] as $image ): ?>
+                  <a href="<?= $image['url'] ?>" data-thumb="<?= $image['url'] ?>">
+                  <img class="w-full h-full" src="<?= $image['url'] ?>" />
+                  </a>
+              <?php endforeach; ?>
+                </div>
+              </div>
+            <?php } ?>
+            <div class="md:pl-[80px] order-first md:order-last" data-aos="fade-up" data-aos-duration="1500">
               <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?></h2>
               <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
               </svg>
               <div class="cus-ul ps-4 text-[#555] py-[50px]">
-                <?= $list['deskripsi_package']?>
-              </div>
+                  <?= $list['deskripsi_package']?>
+                </div>
               <div class="pb-[30px] counter">
                 <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="<?= $list['copies_number']?>"> 0 </span> copies</b>
               </div>
@@ -142,72 +213,9 @@ $preorderType = get_field('preorder_type');
                 </a>
               </div>
             </div>
-            <?php if($list['single_image']){ ?>
-              <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
-                <a href="<?= $list['single_image']['url'] ?>">
-                  <img src="<?= $list['single_image']['url'] ?>" alt="">
-                </a>
-              </div>
-              <?php }else{ ?>
-                <div class="demo pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
-                  <div id="lightSlider" class="single-image lightSlider">
-                  <?php foreach( $list['image_package'] as $image ): ?>
-                    <a href="<?= $image['url'] ?>" data-thumb="<?= $image['url'] ?>">
-                    <img class="w-full h-full" src="<?= $image['url'] ?>" />
-                    </a>
-                <?php endforeach; ?>
-                </div>
-                </div>
-              <?php } ?>
           </div>
-        </div>
-      </section>
-    <?php } else { ?>
-      <section class="delimiter py-[70px] md:py-[100px]">
-        <div class="grid grid-cols-1 md:grid-cols-2 md:order-first">
-          <?php if($list['single_image']){ ?>
-          <div class="pt-[50px] md:pt-[0px] single-image" data-aos="fade-up" data-aos-duration="1500">
-            <a href="<?= $list['single_image']['url'] ?>">
-              <img src="<?= $list['single_image']['url'] ?>" alt="">
-            </a>
-          </div>
-          <?php }else{ ?>
-            <div class="demo pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
-              <div id="lightSlider" class="single-image lightSlider">
-              <?php foreach( $list['image_package'] as $image ): ?>
-                <a href="<?= $image['url'] ?>" data-thumb="<?= $image['url'] ?>">
-                <img class="w-full h-full" src="<?= $image['url'] ?>" />
-                </a>
-            <?php endforeach; ?>
-              </div>
-            </div>
-          <?php } ?>
-          <div class="md:px-[100px] order-first md:order-last" data-aos="fade-up" data-aos-duration="1500">
-            <h2 class="font-butler text-[32px] md:text-[48px] font-medium"><?= $list['title_package']?></h2>
-            <svg width="43" height="7" viewBox="0 0 43 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.5 1C1.5 1 4.46348 5.40529 7.28981 5.40529C10.1161 5.40529 10.2533 1 13.0796 1C15.9059 1 16.0431 5.40529 18.8694 5.40529C21.6957 5.40529 21.8329 1 24.6592 1C27.4855 1 27.6227 5.40529 30.449 5.40529C33.2753 5.40529 33.4125 1 36.2388 1C39.0652 1 42.0286 5.40529 42.0286 5.40529" stroke="#74642F" stroke-width="1.76211"/>
-            </svg>
-            <div class="cus-ul ps-4 text-[#555] py-[50px]">
-                <?= $list['deskripsi_package']?>
-              </div>
-            <div class="pb-[30px] counter">
-              <b class="uppercase  text-[15px] font-[750] tracking-widest">limited To <span class="count percent" data-count="<?= $list['copies_number']?>"> 0 </span> copies</b>
-            </div>
-            <div>
-              <h3 class="font-[400] text-[36px] md:text-[64px] font-butler bg-gradient-to-r from-[#ECBD45] to-[#B1881D] bg-clip-text text-transparent"><?= $list['price']?></h3>
-            </div>
-            <div class="mt-5">
-              <a href="#preorder" class="bg-[#8E2424] rounded-full w-fit px-6 text-white py-2.5 font-semibold">
-                <?php if($list['sold_out'] == 1): ?>
-                  SOLD OUT
-                <?php else: ?>
-                  Pre-order now
-                <?php endif; ?>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      <?php } ?>
     <?php } ?>
 <?php endforeach; endif;?>
 <section id="timeline" class="bg-[#F3F2EC] py-[70px] md:py-[100px]">
@@ -261,7 +269,7 @@ $preorderType = get_field('preorder_type');
               </svg>
             </div>
             <div class="w-full max-w-[20rem] text-left">
-                <p class="font-butler text-[18px] md:text-[24px] font-[500]">2-6 Oct</p>
+                <p class="font-butler text-[18px] md:text-[24px] font-[500]">9-18 Oct</p>
             </div>
         </div>
         <div class="my-4 h-[80px] md:h-auto relative overflow-hidden">
@@ -282,18 +290,12 @@ $preorderType = get_field('preorder_type');
             </svg>
             </div>
             <div class="w-full max-w-[20rem] text-left">
-                <p class="font-butler text-[18px] md:text-[24px] font-[500]">9 Oct onwards</p>
+                <p class="font-butler text-[18px] md:text-[24px] font-[500]">16 Oct onwards</p>
             </div>
         </div>
     </div>
   </div>
 </section>
-
-<?php if($preorderType == 1): ?>
-<section id="waitlist">
-  <?php get_template_part('template-part/waitlist'); ?>
-</section>
-<?php endif; ?>
 
 <section id="preorder" class="delimiter py-[70px] md:py-[100px]">
   <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Where To Pre Order?</h2>
