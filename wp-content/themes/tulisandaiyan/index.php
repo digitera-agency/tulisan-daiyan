@@ -306,7 +306,7 @@ $preorderType = get_field('preorder_type');
    <div class="md:px-24 text-center pt-[50px] md:pt-[0px]" data-aos="fade-up" data-aos-duration="1500">
     <h3 class="font-butler text-[32px] md:text-[48px] font-normal text-center">Website</h3>
     <p class="text-[#74642F] text-[16px] md:text-[24px] py-6 font-normal leading-[28.8px]">For customers residing in Malaysia & Overseas.</p>
-    <a href="https://www.nukilanbiruni.com/product/tulisan-by-daiyan-trisha-hardcover-autograph-edition" target="_blank"><img src="<?php bloginfo('stylesheet_directory');?>/assets/img/n-logo.png" class="w-[50%] md:w-auto m-auto" alt=""></a>
+    <a href="https://www.nukilanbiruni.com/product/tulisan-by-daiyan-trisha" target="_blank"><img src="<?php bloginfo('stylesheet_directory');?>/assets/img/n-logo.png" class="w-[50%] md:w-auto m-auto" alt=""></a>
     </div> 
   </div>
 </section>
