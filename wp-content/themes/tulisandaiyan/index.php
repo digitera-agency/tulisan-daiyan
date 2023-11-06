@@ -24,6 +24,7 @@ $preorderType = get_field('preorder_type');
 
 <?php if($unixtimestamp): ?>
 <input type="hidden" id="dateLaunch" value="<?= $unixtimestamp ?>">
+<?php endif; ?>
 <section class="overflow-hidden">
   <div class="h-screen">
     <div class="flex h-full items-center justify-center">
@@ -36,7 +37,6 @@ $preorderType = get_field('preorder_type');
     </div>
   </div>
 </section>
-<?php endif; ?>
 
 <?php if($section_1 && $section_1['image_1']): ?>
 <section>
