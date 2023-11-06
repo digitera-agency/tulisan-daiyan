@@ -144,7 +144,7 @@ $preorderType = get_field('preorder_type');
                     <?php if($list['sold_out'] == 1): ?>
                       SOLD OUT
                     <?php else: ?>
-                      Pre-order now
+                      Order now
                     <?php endif; ?>
                   </a>
                 </div>
@@ -218,7 +218,7 @@ $preorderType = get_field('preorder_type');
       <?php } ?>
     <?php } ?>
 <?php endforeach; endif;?>
-<section id="timeline" class="bg-[#F3F2EC] py-[70px] md:py-[100px]">
+<!-- <section id="timeline" class="bg-[#F3F2EC] py-[70px] md:py-[100px]">
   <div class="delimiter">
     <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Soft Cover Pre Order Timeline</h2>
     <div class="max-w-screen-lg w-full mx-auto">
@@ -240,7 +240,7 @@ $preorderType = get_field('preorder_type');
             <path d="M10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2H10.5ZM13.0607 183.061C12.4749 183.646 11.5251 183.646 10.9393 183.061L1.3934 173.515C0.807611 172.929 0.807611 171.979 1.3934 171.393C1.97919 170.808 2.92893 170.808 3.51472 171.393L12 179.879L20.4853 171.393C21.0711 170.808 22.0208 170.808 22.6066 171.393C23.1924 171.979 23.1924 172.929 22.6066 173.515L13.0607 183.061ZM13.5 2L13.5 86.375H10.5L10.5 2H13.5ZM13.5 86.375L13.5 182H10.5L10.5 86.375H13.5Z" fill="#282828"/>
           </svg>
         </div>
-        <!-- <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
+        <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
           <div class="w-full max-w-[20rem] text-right">
               <p class="font-butler text-[18px] md:text-[24px] font-[500]">Book Signing Period</p>
           </div>
@@ -257,7 +257,7 @@ $preorderType = get_field('preorder_type');
           <svg class="absolute left-[50%] md:left-[0px] translate-x-[-50%] md:translate-x-0 bottom-0 md:bottom-auto md:relative mx-auto" width="24" height="184" viewBox="0 0 24 184" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2H10.5ZM13.0607 183.061C12.4749 183.646 11.5251 183.646 10.9393 183.061L1.3934 173.515C0.807611 172.929 0.807611 171.979 1.3934 171.393C1.97919 170.808 2.92893 170.808 3.51472 171.393L12 179.879L20.4853 171.393C21.0711 170.808 22.0208 170.808 22.6066 171.393C23.1924 171.979 23.1924 172.929 22.6066 173.515L13.0607 183.061ZM13.5 2L13.5 86.375H10.5L10.5 2H13.5ZM13.5 86.375L13.5 182H10.5L10.5 86.375H13.5Z" fill="#282828"/>
           </svg>
-        </div> -->
+        </div>
         <div class="flex items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1500">
             <div class="w-full max-w-[20rem] text-right">
                 <p class="font-butler text-[18px] md:text-[24px] font-[500]">Fulfilment Period</p>
@@ -295,10 +295,10 @@ $preorderType = get_field('preorder_type');
         </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section id="preorder" class="delimiter py-[70px] md:py-[100px]">
-  <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Where To Pre Order?</h2>
+  <h2 class="font-butler text-[32px] md:text-[48px] font-medium text-center pb-[50px] md:pb-[100px]" data-aos="fade-up" data-aos-duration="1500">Where To Order?</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 md:">
    <div class="md:px-24 text-center" data-aos="fade-up" data-aos-duration="1500">
       <h3 class="font-butler text-[32px] md:text-[48px] font-normal text-center">Shopee</h3>
